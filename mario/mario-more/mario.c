@@ -9,5 +9,6 @@ int main(void)
 
     }
     while
+    //print a number of spaces and hashes for each row
     
 }
