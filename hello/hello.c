@@ -11,3 +11,5 @@ int main(void)
     //Welcome! You should recieve a personalized salute.
     printf("Hello!, %s\n", answer);
 }
+
+//cd name of directory, make name of file, code new file, ./
