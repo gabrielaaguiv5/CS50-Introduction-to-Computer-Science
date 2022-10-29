@@ -6,9 +6,9 @@ int main(void)
     //promt user for input for piramid
     //get_int cause it should only be numbers
     do{
-        int level=get_int("Height: ");
+        level = get_int("Height: ");
     }
-    while level>8 || level<0
+    while (level > 8);
     //print a number of spaces and hashes for each row
 
 }
