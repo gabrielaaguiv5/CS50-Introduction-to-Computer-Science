@@ -22,3 +22,5 @@ int main(void)
     }
     printf("\n");
 }
+
+//print number of spaces
