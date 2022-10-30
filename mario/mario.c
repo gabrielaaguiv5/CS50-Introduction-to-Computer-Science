@@ -16,8 +16,11 @@ int main(void)
     for (int i = 0; i < level; i++)
     {
         printf(" ");
-        printf("#");
-        printf("\n");
+        for (int j = 0; j < level; j++)
+        {
+            printf("#");
+            
+         }
 
     }
     printf("\n");
