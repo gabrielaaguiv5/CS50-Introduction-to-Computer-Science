@@ -13,7 +13,7 @@ int main(void)
 
 
     //print a number of spaces and hashes for each row
-    for (int i = 0; i < level; i++)
+    for (int i = 1; i < level; i++)
     {
         do {
             printf(" ");
