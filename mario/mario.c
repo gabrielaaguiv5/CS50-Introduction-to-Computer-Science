@@ -19,11 +19,11 @@ int main(void)
         {
             printf(" ");
         }
-            for (int stars = 0; stars <= rows-1; stars++)
-            {
-                printf("#");
-            }
-            printf("\n");
+        for (int stars = 0; stars <= rows-1; stars++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
 }
 
