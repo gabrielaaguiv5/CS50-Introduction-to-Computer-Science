@@ -9,7 +9,7 @@ int main(void)
     do{
         level = get_int("Height: ");
     }
-    while (level > 8 || level < 0);
+    while (level > 8 || level <= 0);
 
     //print a number of spaces and hashes for each row
     for (int rows = 1; rows <= level; rows++){
@@ -17,7 +17,7 @@ int main(void)
             printf(" ");
             }
             for (int stars = 0; stars <= rows-1; stars++){
-            printf("*");
+            printf("#");
             }
             printf("\n");
     }
