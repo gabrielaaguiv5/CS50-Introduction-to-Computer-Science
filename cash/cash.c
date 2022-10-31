@@ -8,6 +8,7 @@ int calculate_pennies(int cents);
 
 int main(void)
 {   int cents;
+    int coins;
     // Ask how many cents the customer is owed //I implement the question "Change owed: "
     do
     {
@@ -33,7 +34,7 @@ int main(void)
     cents = cents - pennies * 1;
 
     // Sum coins
-    int coins = quarters + dimes + nickels + pennies;
+    coins = quarters + dimes + nickels + pennies;
 
     // Print total number of coins to give the customer
     printf("%i\n", coins);
