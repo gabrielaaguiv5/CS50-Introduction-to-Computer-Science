@@ -1,17 +1,20 @@
 #include <cs50.h>
 #include <stdio.h>
 
-
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
 
 int main(void)
-{
+{   int cents;
     // Ask how many cents the customer is owed //I implement the question "Change owed: "
+    do
+    {
+        cents = get_int("Change owed: ");
+    }
+    while (cents < 0);
 
-        int cents = get_cents();
 
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
