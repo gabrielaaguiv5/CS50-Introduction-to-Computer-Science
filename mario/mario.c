@@ -18,10 +18,13 @@ int main(void)
             }
             for (int stars = 0; stars <= 2*rows-1; stars++){
             printf("*");
+            for (int middle = 0; middle <= stars){
+                printf(" ");
             }
+
+            }
+
             printf("\n");
-
     }
-
 }
 
