@@ -17,7 +17,7 @@ int main(void)
 
         do{
             printf(" ");
-        }while(spaces < rows - 1);
+        }while(spaces < level - 1);
 
 
         }
