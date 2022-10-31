@@ -16,13 +16,9 @@ int main(void)
         for (int spaces = 1; spaces <= level-rows; spaces++){
             printf(" ");
             }
-            for (int stars = 0; stars <= 2*rows-1; stars++){
+            for (int stars = 0; stars <= rows-1; stars++){
             printf("*");
-            for (stars <= rows){
-                printf(" ");
             }
-            }
-
             printf("\n");
     }
 }
