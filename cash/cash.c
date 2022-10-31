@@ -8,7 +8,6 @@ int calculate_pennies(int cents);
 
 int main(void)
 {   int cents;
-    int quarters;
     // Ask how many cents the customer is owed //I implement the question "Change owed: "
     do
     {
@@ -18,7 +17,7 @@ int main(void)
 
 
     // Calculate the number of quarters to give the customer
-    quarters = calculate_quarters(cents);
+    int quarters = calculate_quarters(cents);
     cents = cents - quarters * 25;
 
     // Calculate the number of dimes to give the customer
@@ -41,9 +40,10 @@ int main(void)
 }
 
 
-int calculate_quarters(cents)
+int calculate_quarters(int cents)
 {
-    return cents - quarters * 25;
+    // TODO
+    return 0;
 }
 
 int calculate_dimes(int cents)
