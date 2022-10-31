@@ -12,10 +12,13 @@ int main(void)
     while (level > 8 || level < 0);
 
     //print a number of spaces and hashes for each row
-    for (int rows = 1; rows <= level; rows++){
-        do{
-            printf(" ");
-        }while();
+    for (int rows = 1; rows < level; rows++){
+
+            printf("*");
+            for (int stars = 0; stars < level-rows; stars++){
+                printf("1");
+            }
+
     }
 
 
