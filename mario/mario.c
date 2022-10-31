@@ -17,7 +17,6 @@ int main(void)
 
             printf("*");
             }
-            printf("1");
     }
 
 
