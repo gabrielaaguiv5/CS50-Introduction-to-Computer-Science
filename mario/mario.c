@@ -13,14 +13,18 @@ int main(void)
 
     //print a number of spaces and hashes for each row
     for (int spaces = 0; spaces < level; spaces++){
-     for (int stars = 1){
-    
+     for (int stars = 1; stars < level){
+
         do {
-            printf(" ");
-            } while (spaces - stars);
+            printf("*");
+            } while (spaces == spaces - stars);
+        printf("* ");
+        stars++;
+    }
 
     }
-    }
+    printf("\n");
+
 
 }
 
