@@ -42,7 +42,7 @@ int main(void)
 
 int calculate_quarters(int cents)
 {
-    cents - quarters * 25
+    cents - quarters * 25;
 }
 
 int calculate_dimes(int cents)
