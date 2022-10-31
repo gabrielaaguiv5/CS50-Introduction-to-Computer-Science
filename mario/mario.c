@@ -18,6 +18,7 @@ int main(void)
             }
             for (int stars = 0; stars <= 2*rows-1; stars++){
             printf("*");
+            for ()
             printf(" ");
             }
 
