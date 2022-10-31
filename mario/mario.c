@@ -15,7 +15,7 @@ int main(void)
     for (int rows = 1; rows <= level; rows++){
         do{
             printf(" ");
-        }while(rows == level - rows);
+        }while();
     }
 
 
