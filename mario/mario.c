@@ -21,7 +21,7 @@ int main(void)
             {
             printf("*");
             printf("\n");
-            }while (rows < level);
+            }while (rows <= level || spaces <= level-rows);
     }
 }
 
