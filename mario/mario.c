@@ -18,7 +18,7 @@ int main(void)
     {
         do {
             printf(" ");
-            } while (i == level-i-1);
+            } while (spaces - stars);
 
             for (int j = 0; j < level; j++)
         {
