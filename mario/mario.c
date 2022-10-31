@@ -12,7 +12,7 @@ int main(void)
     while (level > 8 || level < 0);
 
     //print a number of spaces and hashes for each row
-    for (int spaces = 0; spaces < level; spaces++){
+    for (int rows = 1; rows < level; spaces++){
      for (int stars = 1; stars < level){
 
         do {
