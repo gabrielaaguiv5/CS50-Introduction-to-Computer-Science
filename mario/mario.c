@@ -17,9 +17,11 @@ int main(void)
             printf(" ");
             printf("*");
             }
+            do
+            {
             printf("*");
             printf("\n");
-
+            }while ()
     }
 }
 
