@@ -16,7 +16,6 @@ int main(void)
         for (int stars = 1; stars <= level-rows; stars++){
             printf(" ");
             }
-
             printf("*");
             printf("\n");
 
