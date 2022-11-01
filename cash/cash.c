@@ -40,7 +40,7 @@ int main(void)
     // Print total number of coins to give the customer
     printf("%i\n", coins);
 
-
+}
 
 int calculate_quarters(int cents)
 {
@@ -64,5 +64,4 @@ int calculate_pennies(int cents)
 {
     // Pennies return
     return cents/1;
-}
 }
