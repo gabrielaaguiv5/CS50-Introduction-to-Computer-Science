@@ -10,5 +10,7 @@ int main(void)
     //Count number of words
     //Count number of sentences
 
-    
+    //Apply Coleman-Liau formula
+
+    //Print Grade X
 }
