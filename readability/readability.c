@@ -72,13 +72,13 @@ int count_sentences(string text)
     int counts = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isalnum(text[i]) && text[i] == ',')
+        if (isalnum(text[i]))
         {
             counts = counts + 0;
         }
         else
         {
-            counts = counts + 1;
+            counts++;
         }
     }
     return counts;
