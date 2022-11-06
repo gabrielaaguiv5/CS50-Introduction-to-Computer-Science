@@ -21,7 +21,15 @@ int main(void)
     int grade = (0.0588*letters/words*100)-(0.296*sentences)-15.8;
 
     //Print Grade X
-    printf("Grade %i\n", grade);
+    if (grade > 0 && grade < 16)
+    {
+        printf("Grade %i\n", grade);
+    }
+    else
+    {
+        printf("Grade 16+");
+    }
+
 }
 
 int number_letters(string text)
