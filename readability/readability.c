@@ -45,7 +45,7 @@ int count_letters(string text)
 {
     int i = 0;
     int n = strlen(text);
-    while (i < n && ((isalnum(text[i])) && text[i] != 32))
+    while (i < n && (isalnum(text[i])))
     {
         i++;
     }
