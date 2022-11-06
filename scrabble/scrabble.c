@@ -37,6 +37,7 @@ int main(void)
 int compute_score(string word)
 {
     int score = 0;
+    //i gives us the position of each letter on the word and each letter has a corresponding ASCII value
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         if (isupper(word[i]))
