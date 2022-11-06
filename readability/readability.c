@@ -56,10 +56,30 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    return 0;
+    int countw = 0;
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        if ((text[i]) == ' ')
+        {
+            countw = countw + 1;
+        }
+    }
+    return countw + 1;
 }
 
 int count_sentences(string text)
 {
-    return 0;
+    int counts = 0;
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        if (isalnum(text[i]) && text[i] == ',')
+        {
+            counts = counts + 0;
+        }
+        else
+        {
+            counts = counts + 1;
+        }
+    }
+    return counts;
 }
