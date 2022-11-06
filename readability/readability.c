@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int number_letters(string text);
+int count_letters(string text);
 int number_words(string text);
 int number_sentences(string text);
 
@@ -11,7 +11,7 @@ int main(void)
     string text = get_string("Text: ");
 
     //Count number of letters
-    int letters = number_letters(text);
+    int letters = count_letters(text);
     //Count number of words
     int words = number_words(text);
     //Count number of sentences
