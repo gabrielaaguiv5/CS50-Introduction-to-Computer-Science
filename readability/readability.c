@@ -30,9 +30,13 @@ int main(void)
     {
         printf("Grade %i\n", grade);
     }
+    else if (grade < 0)
+    {
+        printf("Before Grade 1\n");
+    }
     else
     {
-        printf("Grade 16+");
+        printf("Grade 16+\n");
     }
 
 }
@@ -41,13 +45,12 @@ int count_letters(string text)
 {
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isalnum(text[i]))
-        return strlen(text);
+        if (isalnum(text[i]) && text[i] != "\0")
+        {
+            return strlen(text);
+        }
     }
-    else if
-    {
-        return 0;
-    }
+    return 0;
 }
 
 int count_words(string text)
