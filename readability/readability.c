@@ -3,8 +3,8 @@
 #include <ctype.h>
 
 int count_letters(string text);
-int number_words(string text);
-int number_sentences(string text);
+int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -14,9 +14,9 @@ int main(void)
     //Count number of letters
     int letters = count_letters(text);
     //Count number of words
-    int words = number_words(text);
+    int words = count_words(text);
     //Count number of sentences
-    int sentences = number_sentences(text);
+    int sentences = count_sentences(text);
 
     //Apply Coleman-Liau formula
     int grade = (0.0588*letters/words*100)-(0.296*sentences)-15.8;
@@ -33,17 +33,17 @@ int main(void)
 
 }
 
-int number_letters(string text)
+int count_letters(string text)
 {
     return 0;
 }
 
-int number_words(string text)
+int count_words(string text)
 {
     return 0;
 }
 
-int number_sentences(string text)
+int count_sentences(string text)
 {
     return 0;
 }
