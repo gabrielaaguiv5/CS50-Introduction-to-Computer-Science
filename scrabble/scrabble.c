@@ -21,6 +21,7 @@ int main(void)
     // TODO: Print the winner
 }
 
+//Declaring 
 int compute_score(string word)
 {
     int score = 0;
@@ -35,4 +36,5 @@ int compute_score(string word)
             score += POINTS[word[i] - 'a'];
         }
     }
+    return score;
 }
