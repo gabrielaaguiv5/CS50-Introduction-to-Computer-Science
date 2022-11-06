@@ -10,9 +10,7 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         scores[i] = get_int("Score: ");
-        do{
-            na = 0 + n;
-        }while (i < n);
+        na = 0 + scores[i];
     }
     printf("Average: %f\n", na / n);
 }
