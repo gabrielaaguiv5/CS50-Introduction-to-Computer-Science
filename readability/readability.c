@@ -39,8 +39,15 @@ int main(void)
 
 int count_letters(string text)
 {
-    if ()
-    return strlen(text);
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        if (isalnum(text[i]))
+        return strlen(text);
+    }
+    else if
+    {
+        return 0;
+    }
 }
 
 int count_words(string text)
