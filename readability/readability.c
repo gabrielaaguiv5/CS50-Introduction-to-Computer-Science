@@ -44,10 +44,10 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    return words;
+    return 0;
 }
 
 int count_sentences(string text)
 {
-    return sentences;
+    return 0;
 }
