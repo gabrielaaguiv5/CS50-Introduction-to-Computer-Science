@@ -43,14 +43,15 @@ int main(void)
 
 int count_letters(string text)
 {
-    int i = 0;
-        while (isalnum(text[i]))
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        if (isalpha(text[i]) && text[i] != '\0')
         {
-            i++;
+            return strlen(text);
         }
-    return i;
+    }
+    return 0;
 }
-
 
 int count_words(string text)
 {
