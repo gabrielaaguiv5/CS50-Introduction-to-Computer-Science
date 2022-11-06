@@ -43,7 +43,6 @@ int main(void)
 
 int count_letters(string text)
 {
-    int c = 0;
     int i = 0;
     int n = strlen(text);
     while (i < n && (isalnum(text[i])))
