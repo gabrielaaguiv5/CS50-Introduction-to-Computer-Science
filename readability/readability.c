@@ -23,3 +23,18 @@ int main(void)
     //Print Grade X
     printf("Grade %i\n", grade);
 }
+
+int number_letters(string text)
+{
+    return 0;
+}
+
+int number_words(string text)
+{
+    return 0;
+}
+
+int number_sentences(string text)
+{
+    return 0;
+}
