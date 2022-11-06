@@ -5,7 +5,7 @@ int main(void)
 {
     int n = get_int("How many scores? ");
     int scores[n];
-    int na;
+    float na;
 
     for (int i = 0; i < n; i++)
     {
@@ -14,5 +14,5 @@ int main(void)
             na = 0 + n;
         }while (i < n);
     }
-    printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
+    printf("Average: %f\n", na / n);
 }
