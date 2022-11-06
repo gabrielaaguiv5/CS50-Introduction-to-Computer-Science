@@ -51,7 +51,7 @@ int count_letters(string text)
             count = count + 1;
         }
     }
-    return i;
+    return count;
 }
 
 int count_words(string text)
