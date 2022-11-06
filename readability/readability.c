@@ -45,7 +45,7 @@ int count_letters(string text)
 {
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isalnum(text[i]) && text[i] != '\0')
+        if (isalpha(text[i]) && text[i] != '\0')
         {
             return strlen(text);
         }
