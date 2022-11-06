@@ -42,6 +42,7 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
+            //A values ASCII as 65 and with the sustraction word[0]
             score += POINTS[word[i] - 'A'];
         }
         else if (islower(word[i]))
