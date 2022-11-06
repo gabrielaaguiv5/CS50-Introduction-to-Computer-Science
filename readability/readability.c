@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -13,10 +14,13 @@ int main(void)
 
     //Count number of letters
     int letters = count_letters(text);
+    printf ("%i letters\n", letters);
     //Count number of words
     int words = count_words(text);
+    printf ("%i words\n", words);
     //Count number of sentences
     int sentences = count_sentences(text);
+    printf ("%i sentences\n", sentences);
 
     //Apply Coleman-Liau formula
     int grade = (0.0588*letters/words*100)-(0.296*sentences)-15.8;
@@ -35,15 +39,15 @@ int main(void)
 
 int count_letters(string text)
 {
-    return 0;
+    return strlen(text);
 }
 
 int count_words(string text)
 {
-    return 0;
+    return words;
 }
 
 int count_sentences(string text)
 {
-    return 0;
+    return sentences;
 }
