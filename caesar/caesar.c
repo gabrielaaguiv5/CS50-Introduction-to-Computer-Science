@@ -35,7 +35,7 @@ bool only_digits(string argv[1])
 {
         for (int i = 0; i < strlen(argv[1]); i++)
         {
-            if (!isdigit(*argv[1]))
+            if (!isdigit(argv[1][i]))
             {
                 printf("Usage: ./caesar key\n");
                 return false;
