@@ -90,6 +90,7 @@ for (int i = 0; i < candidate_count; i++)
         {
             max = candidates[i].votes;
         }
+        printf("%s\n", candidates[i].name);
     }
-    printf("%s\n", "candidates[i].name");
+
 }
