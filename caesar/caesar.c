@@ -31,11 +31,11 @@ return 0;
 }
 
 
-bool only_digits(string key)
+bool only_digits(string argv[1])
 {
-        for (int i = 0; argv[1][i] != '\0'; i++)
+        for (int i = 0; i < strlen(argv[1]); i++)
         {
-            if (isalpha(argv[1][i]) != 0)
+            if (!isdigit(argv[1][i]))
             {
                 printf("Usage: ./caesar key\n");
                 return false;
