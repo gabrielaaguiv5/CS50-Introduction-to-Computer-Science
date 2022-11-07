@@ -67,10 +67,12 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
+    //Iterates all of the given candidate names
    for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
+            //Count of votes each time a new vote name is given
             candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
@@ -87,12 +89,19 @@ void print_winner(void)
 for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > max)
+        //Saves the max amount of votes in variable
+        {
             max = candidates[i].votes;
+        }
     }
 for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == max)
-            printf("%s\n", candidates[i].name);;
-    }
+        //Prints all name with max amount of votes
+        {
+            printf("%s\n", candidates[i].name);
+        }
+
+     }
 
 }
