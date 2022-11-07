@@ -3,5 +3,7 @@
 
 int main(int argc, string argv[])
 {
+    //Promt user for an integer to be called k
+
     
 }
