@@ -80,6 +80,7 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    int length = sizeof(arr)/sizeof(arr[0]);
 for (int i = 0; i < voter_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
