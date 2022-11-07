@@ -13,7 +13,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
     //The given key 'k'
     //There are 26 characters in the alphabet but if k is 27 that should signify B which is A+1
 
@@ -23,3 +22,7 @@ int main(int argc, string argv[])
 
 }
 
+bool only_digits(string argv[])
+{
+    
+}
