@@ -14,7 +14,7 @@ int main(void)
 
     //Count number of letters
     int letters = count_letters(text);
-    printf ("%i letters\n", letters);
+    p mak
     //Count number of words
     int words = count_words(text);
     printf ("%i words\n", words);
