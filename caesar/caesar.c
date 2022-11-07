@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-bool only_digits(string s);
+bool only_digits(string argv[]);
 
 int main(int argc, string argv[])
 {
@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 return 0;
 }
 
-bool only_digits(string argv[1])
+bool only_digits(string argv[])
 {
     for (int i = 0, n = strlen(argv); i < n; i++)
     {
