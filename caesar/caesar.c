@@ -37,7 +37,7 @@ int main(int argc, string argv[])
         char c = plaintext[i];
         rotate(c, k);
     }
-
+printf("\n");
 return 0;
 }
 
