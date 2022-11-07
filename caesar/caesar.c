@@ -39,7 +39,7 @@ bool only_digits(string input)
 {
         for (int i = 0, n = strlen(input); i < n; i++)
         {
-            if (isdigit(input[i]))
+            if (isdigit(input[i]) == 1)
             {
                 return true;
             }
