@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+int i;
+int n;
 bool only_digits(string argv[i]);
 
 int main(int argc, string argv[])
@@ -26,7 +28,7 @@ return 0;
 
 bool only_digits(string argv[i])
 {
-    for (int i = 0, n = strlen(argv[i); i < n; i++)
+    for (i = 0, n = strlen(argv[i]); i < n; i++)
     {
         if (isdigit(argv[i]))
         {
