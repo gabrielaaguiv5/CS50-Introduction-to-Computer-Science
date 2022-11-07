@@ -11,7 +11,7 @@ int main(void)
     {
         if (strcmp(names[i], "David") == 0)
         {
-            printf("Found %s\n", numbers[]);
+            printf("Found %s\n", numbers[i]);
             return 0;
         }
     }
