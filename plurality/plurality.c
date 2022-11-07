@@ -68,8 +68,14 @@ bool vote(string name)
 {
    for (int i = 0; i < voter_count; i++)
     {
-        string name = get_string("Vote: ");
-    return false;
+        if (strcmp(candidates[i].name, "David") == 0)
+        {
+            printf("Found %s\n", user[i].number);
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 1;
 }
 
 // Print the winner (or winners) of the election
