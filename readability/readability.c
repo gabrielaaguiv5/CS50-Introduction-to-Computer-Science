@@ -31,7 +31,7 @@ int main(void)
     //Print Grade X
     if (grade > 0 && grade < 16)
     {
-        printf("Grade %f\n", (float) round(grade));
+        printf("Grade %i\n", (int) lroundf(grade));
     }
     else if (grade < 0)
     {
