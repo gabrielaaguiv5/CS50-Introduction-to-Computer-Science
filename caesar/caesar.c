@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+//Functions that will be used
 bool only_digits(string key);
 char rotate(char c, int n);
 
@@ -11,6 +12,7 @@ int main(int argc, string argv[])
 {
     string key = argv[1];
 
+    //Checking that input wont be alphabetic or over than a simple int input
     if (argc != 2 || argc > 2 || !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
@@ -18,8 +20,10 @@ int main(int argc, string argv[])
     }
     int k = atoi(argv[1]);
 
+    //Asking for text to encript
     string plaintext = get_string("plaintext: ");
 
+    //Printing cripted text
     printf("ciphertext: ");
     for (int i = 0, nm = strlen(plaintext); i < nm; i++)
     {
