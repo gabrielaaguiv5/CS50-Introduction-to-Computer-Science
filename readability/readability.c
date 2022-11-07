@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 
 int count_letters(string text);
@@ -30,7 +31,7 @@ int main(void)
     //Print Grade X
     if (grade > 0 && grade < 16)
     {
-        printf("Grade %f\n", grade);
+        printf("Grade %f\n", grade, round(grade));
     }
     else if (grade < 0)
     {
