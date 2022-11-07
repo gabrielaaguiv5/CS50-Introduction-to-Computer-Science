@@ -24,6 +24,7 @@ int main(void)
 
     //Apply Coleman-Liau formula
     int grade = (0.0588*letters/words*100)-(0.296*sentences)-15.8;
+    printf ("%i\n", grade);
 
     //Print Grade X
     if (grade > 0 && grade < 16)
