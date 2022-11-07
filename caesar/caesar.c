@@ -19,6 +19,7 @@ int main(int argc, string argv[])
     }
     int k = atoi(argv[1]);
 
+    
 
 
     //Promt user for an integer to be called k
@@ -28,7 +29,7 @@ int main(int argc, string argv[])
     //There are 26 characters in the alphabet but if k is 27 that should signify B which is A+1
 
     //When k is the wanted k printf plaintext: with get_string
-    string plaintext = get_string("plaintext: ");
+
     //With given plaintext printf ciphertext: which is plaintext rotated by k positions and return 0 as main
     printf("ciphertext: ");
     for (int i = 0, nm = strlen(plaintext); i < nm; i++)
