@@ -45,12 +45,6 @@ int main(int argc, string argv[])
         rotate(c, k);
     }
 
-
-
-
-
-
-
 return 0;
 }
 
