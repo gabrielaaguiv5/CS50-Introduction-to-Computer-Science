@@ -13,6 +13,19 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    bool only_digits(string argv[])
+    {
+        for (int i = 0, n = strlen(argv[]); i < n; i++)
+        {
+            if (isdigit(argv[i]))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+}
     //The given key 'k'
     //There are 26 characters in the alphabet but if k is 27 that should signify B which is A+1
 
