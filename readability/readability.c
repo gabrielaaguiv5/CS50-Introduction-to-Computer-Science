@@ -60,7 +60,7 @@ int count_words(string text)
     int countw = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if ((text[i]) == ' ' || (text[i]) == ', ')
+        if ((text[i]) == ' ')
         {
             countw = countw + 1;
         }
