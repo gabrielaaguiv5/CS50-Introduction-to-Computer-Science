@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 return 0;
 }
 
-bool only_digits(argv[])
+bool only_digits(string argv[1])
 {
     for (int i = 0, n = strlen(argv); i < n; i++)
     {
