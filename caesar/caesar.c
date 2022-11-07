@@ -4,14 +4,14 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-bool only_digits(string argv[1]);
+bool only_digits(string key);
 char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
     string key = argv[1];
 
-    if (argc != 2 || argc > 2)
+    if (argc != 2 || argc > 2 || !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -31,12 +31,11 @@ return 0;
 }
 
 
-bool only_digits(string argv[1])
+bool only_digits(string key)
 {
-        for (int i = 0; i < strlen(argv[1]); i++)
+        for (int i = 0; i < strlen(key); i++)
         {
-            if (isalpha(argv[1][i]))
-                printf("Usage: ./caesar key\n");
+            if (!isdigit(key[i]))
                 return false;
         }
         return true;
