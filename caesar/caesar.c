@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool only_digits(string s);
+
 int main(int argc, string argv[])
 {
     //Promt user for an integer to be called k
@@ -11,7 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //The given key 'k' 
+    //The given key 'k'
     //There are 26 characters in the alphabet but if k is 27 that should signify B which is A+1
 
     //When k is the wanted k printf plaintext: with get_string
