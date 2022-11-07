@@ -6,6 +6,7 @@
 
 int main(int argc, string argv[])
 {
+    string key = argv[1];
     //Promt user for an integer to be called k
     //Check if given k is digits
     bool only_digits(string argv[]);
@@ -21,7 +22,7 @@ int main(int argc, string argv[])
     }
 
     //If not given a single integer for k printf Usage: ./caesar key return 1 as value of main
-    if (argc != 2 || argc > 2 || only_digits(argv) == false)
+    if (argc != 2 || argc > 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
