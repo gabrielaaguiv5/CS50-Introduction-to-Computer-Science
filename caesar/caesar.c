@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 
     //If not given a single integer for k printf Usage: ./caesar key return 1 as value of main
-    if (argc != 2 && argc > 2 && only_digits(argv) == false)
+    if (argc != 2 || argc > 2 || only_digits(argv) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
