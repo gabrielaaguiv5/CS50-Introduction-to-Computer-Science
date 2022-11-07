@@ -11,14 +11,19 @@ person;
 
 int main(void)
 {
-    string names[] = {"Carter", "David"};
-    string numbers[] = {"+1-617-495-1000", "+1-949-468-2750"};
+    person user[2];
+
+    user[0].name = "Carter";
+    user[0].number = "+1-617-495-1000";
+
+    user[1].name = "David";
+    user[1].number = "+1-949-468-2750";
 
     for (int i = 0; i < 2; i++)
     {
-        if (strcmp(names[i], "David") == 0)
+        if (strcmp(user[i].name, "David") == 0)
         {
-            printf("Found %s\n", numbers[i]);
+            printf("Found %s\n", user[i].number);
             return 0;
         }
     }
