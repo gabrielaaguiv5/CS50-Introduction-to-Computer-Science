@@ -31,7 +31,7 @@ return 0;
 }
 
 
-bool only_digits(string argv[1])
+bool only_digits(string key)
 {
         for (int i = 0; argv[1][i] != '\0'; i++)
         {
