@@ -12,40 +12,14 @@ int main(int argc, string argv[])
     string key = argv[1];
     //If not given a single integer for k printf Usage: ./caesar key return 1 as value of main
 
-    if (argc != 2 || argc > 2 || only_digits(argv[1]))
+    if (argc != 2 || argc > 2 || !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
     int k = atoi(argv[1]);
 
-    string plaintext = get_string("plaintext: ");
 
-    printf("ciphertext: ");
-    for (int i = 0, nm = strlen(plaintext); i < nm; i++)
-    {
-        char c = plaintext[i];
-        rotate(c, k);
-    }
-printf("\n");
-return 0;
-}
-
-
-
-
-
-bool only_digits(string input)
-{
-        for (int i = 0, n = strlen(input); i < n; i++)
-        {
-            if (isdigit(input[i]) == 1)
-            {
-                return true;
-            }
-        }
-        return false;
-}
 
 
     //Promt user for an integer to be called k
@@ -57,6 +31,32 @@ bool only_digits(string input)
     //When k is the wanted k printf plaintext: with get_string
 
     //With given plaintext printf ciphertext: which is plaintext rotated by k positions and return 0 as main
+    printf("ciphertext: ");
+    for (int i = 0, nm = strlen(plaintext); i < nm; i++)
+    {
+        char c = plaintext[i];
+        rotate(c, k);
+    }
+
+return 0;
+}
+
+bool only_digits(string input)
+{
+        for (int i = 0, n = strlen(input); i < n; i++)
+        {
+            if (isdigit(input[i]))
+            {
+                return true;
+            }
+        }
+        return false;
+}
+
+
+
+
+
 
 
 char rotate(char c, int n)
