@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-char rotate(char *, int n);
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -41,7 +41,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0, nm = strlen(plaintext); i < nm; i++)
     {
-        char c = plaintext [i];
+        char c = plaintext[i];
         rotate(c, k);
     }
 
@@ -55,18 +55,18 @@ return 0;
 }
 
 
-char rotate(char *, int n)
+char rotate(char c, int n)
 {
-    if (isupper(plaintext[i]))
+    if (isupper(c))
     {
-        printf("%c",(((plaintext[i] - 'A') + k) %26) + 'A');
+        printf("%c",(((c - 'A') + n) %26) + 'A');
     }
-    else if (islower(plaintext[i]))
+    else if (islower(c))
     {
-        printf("%c",(((plaintext[i] - 'a') + k) %26) + 'a');
+        printf("%c",(((c - 'a') + n) %26) + 'a');
     }
     else
     {
-        printf("%c",(plaintext[i]));
+        printf("%c",(c));
     }
 }
