@@ -36,10 +36,8 @@ bool only_digits(string argv[1])
         for (int i = 0; i < strlen(argv[1]); i++)
         {
             if (isalpha(argv[1][i]))
-            {
                 printf("Usage: ./caesar key\n");
                 return false;
-            }
         }
         return true;
 }
