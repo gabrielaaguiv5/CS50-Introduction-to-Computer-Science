@@ -17,15 +17,19 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    int k = atoi(argv[1]);
+
+    string plaintext = get_string("plaintext: ");
+
 
     //Promt user for an integer to be called k
     //Check if given k is digits
 
     //The given key 'k'
     //There are 26 characters in the alphabet but if k is 27 that should signify B which is A+1
-    int k = atoi(argv[1]);
+
     //When k is the wanted k printf plaintext: with get_string
-    string plaintext = get_string("plaintext: ");
+
     //With given plaintext printf ciphertext: which is plaintext rotated by k positions and return 0 as main
     printf("ciphertext: ");
     for (int i = 0, nm = strlen(plaintext); i < nm; i++)
@@ -36,6 +40,10 @@ int main(int argc, string argv[])
 
 return 0;
 }
+
+
+
+
 
 bool only_digits(string input)
 {
@@ -48,9 +56,6 @@ bool only_digits(string input)
         }
         return false;
 }
-
-
-
 
 
 
