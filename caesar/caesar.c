@@ -52,7 +52,7 @@ return 0;
 
 char rotate(char *t, int n)
 {
-    for (int i = 0, np = strlen(plaintext); i < np; i++)
+    for (int i = 0, nm = strlen(*plaintext); i < nm; i++)
     {
 
     }
