@@ -9,7 +9,7 @@ int main(int argc, string argv[])
 {
     //Promt user for an integer to be called k
     //If not given a single integer for k printf Usage: ./caesar key return 1 as value of main
-    if (argc != 2 || argc > 2 || )
+    if (argc != 2 || argc > 2 || only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key");
         return 1;
@@ -21,10 +21,10 @@ int main(int argc, string argv[])
     //When k is the wanted k printf plaintext: with get_string
 
     //With given plaintext printf ciphertext: which is plaintext rotated by k positions and return 0 as main
-
+return 0;
 }
 
-bool only_digits(string argv[])
+bool only_digits(argv[])
 {
     for (int i = 0, n = strlen(argv); i < n; i++)
     {
