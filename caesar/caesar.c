@@ -59,14 +59,14 @@ char rotate(char c, int n)
 {
     if (isupper(c))
     {
-        printf("%c",(((c - 'A') + n) %26) + 'A');
+        return printf("%c",(((c - 'A') + n) %26) + 'A');
     }
     else if (islower(c))
     {
-        printf("%c",(((c - 'a') + n) %26) + 'a');
+        return printf("%c",(((c - 'a') + n) %26) + 'a');
     }
     else
     {
-        printf("%c",(c));
+        return printf("%c",(c));
     }
 }
