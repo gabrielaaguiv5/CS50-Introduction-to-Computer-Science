@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-bool only_digits(string argv[]);
+bool only_digits(string input);
 char rotate(char c, int n);
 
 int main(int argc, string argv[])
@@ -37,17 +37,17 @@ int main(int argc, string argv[])
 return 0;
 }
 
-bool only_digits(string argv[]);
-    {
-        for (int i = 0, n = strlen(argv[1]); i < n; i++)
+bool only_digits(string input)
+{
+        for (int i = 0, n = strlen(input); i < n; i++)
         {
-            if (isdigit(argv[1][i]))
+            if (isdigit(input[]))
             {
                 return true;
             }
         }
         return false;
-     }
+}
 
 
 
