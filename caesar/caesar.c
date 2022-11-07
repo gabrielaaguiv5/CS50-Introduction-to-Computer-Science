@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-bool only_digits(string input);
+bool only_digits(string argv[1]);
 char rotate(char c, int n);
 
 int main(int argc, string argv[])
@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     string key = argv[1];
     //If not given a single integer for k printf Usage: ./caesar key return 1 as value of main
 
-    if (argc != 2 || argc > 2 || !only_digits(argv[1]))
+    if (argc != 2 || argc > 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -35,9 +35,9 @@ return 0;
 
 
 
-bool only_digits(string input)
+bool only_digits(string argv[1])
 {
-        for (int i = 0, n = strlen(input); i < n; i++)
+        for (int i = 0, n = strlen(argv[1]); i < n; i++)
         {
             if (!isdigit(input[1][i]))
             {
