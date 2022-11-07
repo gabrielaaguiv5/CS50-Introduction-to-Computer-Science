@@ -4,7 +4,7 @@
 #include <string.h>
 #include <math.h>
 
-
+//Declaring functions
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
@@ -28,7 +28,7 @@ int main(void)
     float grade = (0.0588*letters/words*100)-(0.296*sentences/words*100)-15.8;
 
 
-    //Print Grade X
+    //Print Grade if between 1 and 16, if less than 1, and if more than 16
     if (grade > 0 && grade < 16)
     {
         printf("Grade %i\n", (int) lroundf(grade));
@@ -44,6 +44,7 @@ int main(void)
 
 }
 
+//To count letters it is needed to check if alphanumeric and not to count spaces
 int count_letters(string text)
 {
     int count = 0;
@@ -57,6 +58,7 @@ int count_letters(string text)
     return count;
 }
 
+//To count 
 int count_words(string text)
 {
     int countw = 0;
