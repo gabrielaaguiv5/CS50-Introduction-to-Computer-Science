@@ -58,7 +58,7 @@ int count_letters(string text)
     return count;
 }
 
-//To count 
+//To count words it is needed to count spaces and add 1 for last word
 int count_words(string text)
 {
     int countw = 0;
@@ -72,6 +72,7 @@ int count_words(string text)
     return countw + 1;
 }
 
+//To count sentences it is needed to count punctuation
 int count_sentences(string text)
 {
     int counts = 0;
