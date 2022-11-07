@@ -1,6 +1,6 @@
 sort1 uses: Bubble Sort
 
-How do you know?: Checking the time of sorting it takes the longest time to sort (n).
+How do you know?: Checking the time of sorting it takes the not the shortest time to sort but also not the longest (n).
 
 sort2 uses: Merge Sort
 
@@ -8,4 +8,4 @@ How do you know?: Checking the time of sorting it takes the shortest time to sor
 
 sort3 uses: Selection Sort
 
-How do you know?: Checking the time of sorting it takes not the shortest time to sort but also not the longest (n2).
+How do you know?: Checking the time of sorting it takes the longest (n2).
