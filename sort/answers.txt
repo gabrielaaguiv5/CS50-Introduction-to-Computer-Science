@@ -1,6 +1,6 @@
-sort1 uses: Merge Sort
+sort1 uses: Bubble Sort
 
-How do you know?: Checking the time of sorting it takes the longest time to sort (n long n).
+How do you know?: Checking the time of sorting it takes the longest time to sort (n).
 
 sort2 uses: Merge Sort
 
