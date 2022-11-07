@@ -29,9 +29,9 @@ int main(int argc, string argv[])
 
     //The given key 'k'
     //There are 26 characters in the alphabet but if k is 27 that should signify B which is A+1
-
+    int k = atoi(argv[1]);
     //When k is the wanted k printf plaintext: with get_string
-
+    string plaintext = get_string("plaintext: ");
     //With given plaintext printf ciphertext: which is plaintext rotated by k positions and return 0 as main
 return 0;
 }
