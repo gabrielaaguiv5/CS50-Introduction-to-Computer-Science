@@ -26,5 +26,12 @@ int main(int argc, string argv[])
 
 bool only_digits(string argv[])
 {
-    
+    for (int i = 0, n = strlen(a); i < n; i++)
+    {
+        if (isalnum(text[i]))
+        {
+            count = count + 1;
+        }
+    }
+    return count;
 }
