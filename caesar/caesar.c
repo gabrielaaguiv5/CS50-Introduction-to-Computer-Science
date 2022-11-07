@@ -13,9 +13,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    bool only_digits(string argv[])
+    bool only_digits(string argv)
     {
-        for (int i = 0, n = strlen(argv[]); i < n; i++)
+        for (int i = 0, n = strlen(argv); i < n; i++)
         {
             if (isdigit(argv[i]))
             {
