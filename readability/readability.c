@@ -14,10 +14,13 @@ int main(void)
 
     //Count number of letters
     int letters = count_letters(text);
+    printf ("%i letters\n", letters);
     //Count number of words
     int words = count_words(text);
+    printf ("%i words\n", words);
     //Count number of sentences
     int sentences = count_sentences(text);
+    printf ("%i sentences\n", sentences);
 
     //Apply Coleman-Liau formula
     int grade = (0.0588*letters/words*100)-(0.296*sentences)-15.8;
