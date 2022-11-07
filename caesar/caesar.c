@@ -39,12 +39,13 @@ bool only_digits(string input)
 {
         for (int i = 0, n = strlen(input); i < n; i++)
         {
-            if (isdigit(input[i]))
+            if (!isdigit(input[1][i]))
             {
-                return true;
+                printf("Usage: ./caesar key\n");
+                return false;
             }
         }
-        return false;
+        return true;
 }
 
 
