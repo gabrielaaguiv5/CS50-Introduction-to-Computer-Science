@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
         // Query for each rank
         for (int j = 0; j < rank; j++)
         {
-            if (name[i][j] == candidates[i].name)
+            if (name[j] == candidates[i].name)
             {
                 return true;
             }
