@@ -136,14 +136,13 @@ bool vote(int voter, int rank, string name)
         {
             if (strcmp(candidates[j].name, name) == 0)
             {
-                return false;
+                return true;
             }
         }
-        printf("%s\n",candidates[j].name);
     }
     return false;
 }
-
+   
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
