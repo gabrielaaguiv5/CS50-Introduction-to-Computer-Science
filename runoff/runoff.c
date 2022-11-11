@@ -127,6 +127,20 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
+    for (int i = 0; i < voter; i++)
+    {
+
+        // Query for each rank
+        for (int j = 0; j < rank; j++)
+        {
+            if (name[i][j] == candidates[i].name)
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
     // TODO
     return false;
 }
