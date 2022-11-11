@@ -130,8 +130,6 @@ bool vote(int voter, int rank, string name)
 {
     for (int i = 0; i < voter; i++)
     {
-
-        // Query for each rank
         for (int j = 0; j < rank; j++)
         {
             if (strcmp(candidates[j].name, name) == 0)
