@@ -28,10 +28,9 @@ int main(int argc, char *argv[])
 
     char *filename = malloc(8 * sizeof(char));
 
-    BYTE bytes[JPEGRAM];
-    while(fread(bytes, sizeof(BYTE), JPEGRAM, file))
+    while(fread(buffer, sizeof(char), 512, file))
     {
-        if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff && (bytes[3]&0xf0)==0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3]&0xf0)==0xe0)
         {
             sprintf(filename, "%03d.jpg", image++);
             output = fopen(filename, "w");
@@ -41,7 +40,7 @@ int main(int argc, char *argv[])
 
         if (output != NULL)
         {
-            fwrite(bytes, sizeof(BYTE), JPEGRAM, output);
+            fwrite(buffer, sizeof(char), 512, output);
         }
     }
     free(filename);
