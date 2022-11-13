@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    unsigned char buffer[512];
+    BYTE buffer[512];
 
     int image = 0;
 
