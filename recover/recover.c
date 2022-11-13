@@ -33,6 +33,11 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+            if(output != NULL)
+            {
+                fclose(output);
+            }
+
             sprintf(filename, "%03i.jpg", image);
             output = fopen(filename, "w");
 
@@ -45,9 +50,12 @@ int main(int argc, char *argv[])
         }
     }
     free(filename);
-    fclose(output);
+    if(output != NULL)
+    {
+        fclose(output);
+    }
     fclose(file);
 
-return 0;
+     return 0;
 }
 
