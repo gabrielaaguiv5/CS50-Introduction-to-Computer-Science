@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 const int JPEGRAM = 512;
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -16,13 +17,15 @@ int main(int argc, char *argv[])
 
     // Open files and determine scaling factor
     FILE *file = fopen(argv[1], "r");
-    if (input == NULL)
+    if (!file)
     {
         printf("Could not open file.\n");
         return 1;
     }
 
-    
+    BYTE bytes[JPEGRAM];
+    fread(bytes, sizeof(BYTE), JPEGRAM, file);
+
 
 
 }
