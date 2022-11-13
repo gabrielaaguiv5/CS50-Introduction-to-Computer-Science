@@ -29,8 +29,6 @@ int main(int argc, char *argv[])
     // Check first three bytes
     if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
     {
-        bool bytef(BYTE bytes[n])
-        {
             for (int i = 0; i < BYTE bytes[n]; i++)
         {
             if (!isdigit(key[i]))
