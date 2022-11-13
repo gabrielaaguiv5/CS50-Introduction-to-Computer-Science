@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+const int JPEGRAM = 512;
+
 int main(int argc, char *argv[])
 {
     int main(int argc, char *argv[])
