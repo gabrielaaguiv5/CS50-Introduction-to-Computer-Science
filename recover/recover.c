@@ -7,8 +7,6 @@ typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
-    int main(int argc, char *argv[])
-{
     // Check command-line arguments
     if (argc != 2)
     {
@@ -35,25 +33,21 @@ int main(int argc, char *argv[])
     {
         if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff && (bytes[3]&0xf0)==0xe0)
         {
-            if(output != NULL)
+            sprintf(filename, "%03d.jpg", image++);
+            output = fopen(filename, "w");
+
+            image++;
+        }
+
+        if (output != NULL)
         {
-            fclose(output);
+            fwrite(bytes, sizeof(BYTE), JPEGRAM, output);
         }
-        sprintf(filename, "%03d.jpg", jpeg++);
-        output = fopen(filename, "w");
-        }
-
     }
+    free(filename);
+    fclose(output);
+    fclose(file);
 
-    // Check first three bytes
-
-    if(output != NULL)
-    {
-        fclose(output);
-    }
-
-    }
-
-
-
+return 0;
 }
+
