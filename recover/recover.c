@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 const int JPEGRAM = 512;
 typedef uint8_t BYTE;
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 
     FILE *output = NULL;
 
-    char filename[8]={0};
+    char *filename = malloc(8 * sizeof(char));
 
     BYTE bytes[JPEGRAM];
     fread(bytes, sizeof(BYTE), JPEGRAM, file);
