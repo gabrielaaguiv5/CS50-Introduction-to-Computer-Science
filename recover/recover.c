@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    int image = 0;
+
     FILE *output = NULL;
 
     char filename[8]={0};
