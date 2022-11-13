@@ -23,12 +23,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *output = fopen(argv[2], "w");
-    if (output == NULL)
-    {
-        printf("Could not open file.\n");
-        return 1;
-    }
+    FILE *output = NULL;
 
     BYTE bytes[JPEGRAM];
     fread(bytes, sizeof(BYTE), JPEGRAM, file);
@@ -36,7 +31,8 @@ int main(int argc, char *argv[])
     // Check first three bytes
     if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff && (bytes[3]&0xf0)==0xe0)
     {
-
+        sprintf(filename, "%03d.jpg", jpeg++);
+        output = fopen(filename, "w");
     }
 
     }
