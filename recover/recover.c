@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-unsigned char buffer[512];
 typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
@@ -19,8 +18,10 @@ int main(int argc, char *argv[])
     if (file == NULL)
     {
         printf("Could not open file.\n");
-        return 1;
+        return 2;
     }
+
+    unsigned char buffer[512];
 
     int image = 0;
 
