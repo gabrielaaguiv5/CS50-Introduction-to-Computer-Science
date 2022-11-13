@@ -33,13 +33,13 @@ int main(int argc, char *argv[])
     //For jpg files to load in output
     char *filename = malloc(8 * sizeof(char));
 
-    while(fread(buffer, sizeof(char), 512, file))
+    while (fread(buffer, sizeof(char), 512, file))
     {
         //Checking first 4 bytes
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             //Free data if no found jpeg
-            if(output != NULL)
+            if (output != NULL)
             {
                 fclose(output);
             }
@@ -57,12 +57,12 @@ int main(int argc, char *argv[])
     }
     //Free all memory
     free(filename);
-    if(output != NULL)
+    if (output != NULL)
     {
         fclose(output);
     }
     fclose(file);
 
-     return 0;
+    return 0;
 }
 
