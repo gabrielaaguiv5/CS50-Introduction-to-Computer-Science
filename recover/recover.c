@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     BYTE bytes[JPEGRAM];
     fread(bytes, sizeof(BYTE), JPEGRAM, file);
 
+    
+
 
 
 }
