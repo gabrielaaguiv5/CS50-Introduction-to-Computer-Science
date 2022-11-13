@@ -26,7 +26,22 @@ int main(int argc, char *argv[])
     BYTE bytes[JPEGRAM];
     fread(bytes, sizeof(BYTE), JPEGRAM, file);
 
-    
+    // Check first three bytes
+    if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
+    {
+        bool bytef(BYTE bytes[n])
+        {
+            for (int i = 0; i < BYTE bytes[n]; i++)
+        {
+            if (!isdigit(key[i]))
+                return false;
+        }
+        return true;
+        }
+
+}
+
+    }
 
 
 
