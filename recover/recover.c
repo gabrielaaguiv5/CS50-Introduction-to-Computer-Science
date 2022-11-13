@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-const int JPEGRAM = 512;
+unsigned char buffer[512];
 typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
