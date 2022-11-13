@@ -6,14 +6,14 @@ int main(int argc, char *argv[])
     int main(int argc, char *argv[])
 {
     // Check command-line arguments
-    if (argc != 4)
+    if (argc != 2)
     {
-        printf("Usage: ./volume input.wav output.wav factor\n");
+        printf("Usage: ./recover IMAGE\n");
         return 1;
     }
 
     // Open files and determine scaling factor
-    FILE *input = fopen(argv[1], "r");
+    FILE *file = fopen(argv[1], "r");
     if (input == NULL)
     {
         printf("Could not open file.\n");
