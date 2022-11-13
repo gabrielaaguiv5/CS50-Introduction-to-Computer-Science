@@ -41,11 +41,12 @@ int main(int argc, char *argv[])
 
         if (output != NULL)
         {
-            fwrite(buffer, sizeof(char), 512, output);
+            fwrite(buffer, sizeof(char), 512, output); fclose(output);
+            fclose(output);
         }
     }
     free(filename);
-    fclose(output);
+
     fclose(file);
 
 return 0;
