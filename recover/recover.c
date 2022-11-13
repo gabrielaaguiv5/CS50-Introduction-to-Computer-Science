@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
             output = fopen(filename, "w");
 
             image++;
+        }
 
 
         if (output != NULL)
@@ -44,8 +45,8 @@ int main(int argc, char *argv[])
             fwrite(buffer, sizeof(char), 512, output); fclose(output);
             fclose(output);
         }
-        }
     }
+    
     free(filename);
     fclose(output);
     fclose(file);
