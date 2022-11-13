@@ -31,18 +31,21 @@ int main(int argc, char *argv[])
     char *filename = malloc(8 * sizeof(char));
 
     BYTE bytes[JPEGRAM];
-    fread(bytes, sizeof(BYTE), JPEGRAM, file);
-
-    // Check first three bytes
-    if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff && (bytes[3]&0xf0)==0xe0)
+    while(fread(bytes, sizeof(BYTE), JPEGRAM, file))
     {
-        if(output != NULL)
+        if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff && (bytes[3]&0xf0)==0xe0)
+        {
+            if(output != NULL)
         {
             fclose(output);
         }
         sprintf(filename, "%03d.jpg", jpeg++);
         output = fopen(filename, "w");
+        }
+
     }
+
+    // Check first three bytes
 
     if(output != NULL)
     {
