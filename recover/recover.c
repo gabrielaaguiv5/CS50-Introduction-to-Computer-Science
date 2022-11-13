@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     // Open files and determine scaling factor
     FILE *file = fopen(argv[1], "r");
-    if (!file)
+    if (file == NULL)
     {
         printf("Could not open file.\n");
         return 1;
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
         sprintf(filename, "%03d.jpg", jpeg++);
         output = fopen(filename, "w");
     }
-    
+
     if(output != NULL)
     {
         fclose(output);
