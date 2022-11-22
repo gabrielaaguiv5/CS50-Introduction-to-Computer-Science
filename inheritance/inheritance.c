@@ -47,7 +47,7 @@ person *create_family(int generations)
     person *p = malloc(sizeof(person));
 
     // If there are still generations left to create
-    //Loop to create 
+    //Loop to create parents//grandparents
     if (generations > 1)
     {
         // Create two new parents for current person by recursively calling create_family
