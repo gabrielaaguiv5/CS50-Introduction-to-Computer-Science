@@ -18,7 +18,7 @@ person;
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
 
-//Function that returns typedef struct person
+//Function that returns typedef struct person: pointer to a person with x parents
 person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
@@ -30,6 +30,7 @@ int main(void)
     srand(time(0));
 
     // Create a new family with three generations
+    //create_family(3) should return a pointer to a person with two parents, where each parent also has two parents
     person *p = create_family(GENERATIONS);
 
     // Print family tree of blood types
