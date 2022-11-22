@@ -8,7 +8,9 @@
 // Each person has two parents and two alleles
 typedef struct person
 {
+    //Repeats the generation of alleles for each parent of the person
     struct person *parents[2];
+    //Space for two alleles of each person
     char alleles[2];
 }
 person;
@@ -16,6 +18,7 @@ person;
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
 
+//Function that returns typedef struct person
 person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
@@ -49,7 +52,7 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        
+
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
 
