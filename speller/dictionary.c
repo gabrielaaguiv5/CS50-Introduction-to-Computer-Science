@@ -6,9 +6,12 @@
 #include "dictionary.h"
 
 // Represents a node in a hash table
+//Hash table is a collection of linked lists
 typedef struct node
 {
+    //Every node has a word which is a character array plus /0
     char word[LENGTH + 1];
+    //Address of next node
     struct node *next;
 }
 node;
@@ -46,7 +49,7 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    
+
 
 
 
