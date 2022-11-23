@@ -47,6 +47,8 @@ unsigned int hash(const char *word)
     return (sword) % N;
 }
 
+//For function size
+int dsize = 0:
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
@@ -78,6 +80,9 @@ bool load(const char *dictionary)
         //Insert node in hash table
         table[hashi] = n;
 
+        //Count of words in loop for function size
+        dsize ++;
+
     }
 
     fclose(file);
@@ -88,7 +93,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
+    //Print value of dsize from function load
     return 0;
 }
 
