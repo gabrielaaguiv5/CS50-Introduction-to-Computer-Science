@@ -22,7 +22,7 @@ node;
 
 //For function size
 int dsize = 0;
-// TODO: Choose number of buckets in hash table
+
 //26 letters of the alphabet
 const unsigned int N = 10000;
 
