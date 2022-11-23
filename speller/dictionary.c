@@ -17,9 +17,11 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
+//26 letters of the alphabet
 const unsigned int N = 26;
 
 // Hash table
+//Array of node pointers, each points to a node, for each letter of the alphabet
 node *table[N];
 
 //Create n type node
@@ -49,6 +51,14 @@ bool load(const char *dictionary)
     {
         return false;
     }
+    //Allocate memory for each new node to go to the hash table
+    //Address of memory size of node into n
+    node *n = malloc(sizeof(node));
+    //To put memory in the node, for each word of the file
+    
+
+
+
 
 
 
