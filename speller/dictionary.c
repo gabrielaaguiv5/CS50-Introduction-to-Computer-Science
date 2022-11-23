@@ -25,7 +25,7 @@ const unsigned int N = 26;
 node *table[N];
 
 //Create n type node
-node *n = malloc(sizeof(node));
+node *n = NULL;
 int main (void)
 {
 
@@ -91,5 +91,4 @@ bool unload(void)
 {
     // TODO
     return false;
-}
 }
