@@ -57,17 +57,19 @@ bool load(const char *dictionary)
     //Address of memory size of node into n
     while(fscanf(file, "%s", dword) != EOF)
     {
+        //Create new node for each word scanned
         node *n = malloc(sizeof(node));
         if (!n)
         {
             return false;
         }
+        //Copy word scanned into word char of node struct
         strcpy (n->word, dword);
-
+        //Get int from hash function to locate word scanned into hash table
         int hashi = hash(dword);
-
+        //Input int to next address in node struct to connect hash table according to hash function
         n->next = table[hashi];
-
+        //Insert node in hash table
         table[hashi] = n;
 
     }
