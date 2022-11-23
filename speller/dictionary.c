@@ -24,11 +24,6 @@ const unsigned int N = 26;
 //Array of node pointers, each points to a node, for each letter of the alphabet
 node *table[N];
 
-//Create n type node
-node *n = NULL;
-int main (void)
-{
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -46,6 +41,8 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    //Create n type node
+    node *n = NULL;
     //True if load false if no memory
     //Use of "r" because the file is for reading, for txt
     FILE *file = fopen(dictionary, "r");
