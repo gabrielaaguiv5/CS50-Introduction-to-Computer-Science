@@ -20,6 +20,8 @@ typedef struct node
 }
 node;
 
+//For function size
+int dsize = 0;
 // TODO: Choose number of buckets in hash table
 //26 letters of the alphabet
 const unsigned int N = 10000;
@@ -62,8 +64,6 @@ unsigned int hash(const char *word)
     return (sword) % N;
 }
 
-//For function size
-int dsize = 0;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
