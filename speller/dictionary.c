@@ -44,8 +44,6 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    //Create n type node
-    node *n = NULL;
     //True if load false if no memory
     //Use of "r" because the file is for reading, for txt
     FILE *file = fopen(dictionary, "r");
@@ -57,7 +55,7 @@ bool load(const char *dictionary)
     char dword[LENGTH + 1];
     //Allocate memory for each new node to go to the hash table
     //Address of memory size of node into n
-    while(fscanf(file, "%s", dword != EOF)
+    while(fscanf(file, "%s", dword) != EOF)
     {
         node *n = malloc(sizeof(node));
         if (!n)
