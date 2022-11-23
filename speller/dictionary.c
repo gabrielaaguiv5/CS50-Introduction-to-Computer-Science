@@ -40,13 +40,14 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //True if load false if no memory
-    FILE *file = fopen(dictionary, "a");
+    //Use of "r" because the file is for reading
+    FILE *file = fopen(dictionary, "r");
     if (!file)
     {
         return false;
     }
 
-    
+
 
     return false;
 }
