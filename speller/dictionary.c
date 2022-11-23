@@ -30,7 +30,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    //We obtain hash value type int from the hash function
     return false;
 }
 
@@ -38,7 +38,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     //With the use of the ASCII chart, reference: 2022, https://elcodigoascii.com.ar/codigos-ascii/espacio-codigo-ascii-32.html
-
+    //For the type of hash table implementation, reference: 2022, https://pages.cs.wisc.edu/~siff/CS367/Notes/hash.html
     int sword = 0;
     for (int i = 0; i < strlen(word); i++)
     {
