@@ -90,7 +90,7 @@ bool load(const char *dictionary)
         //Copy word scanned into word char of node struct
         strcpy (n->word, dword);
         //Get int from hash function to locate word scanned into hash table
-        hashi = hash(dword);
+        hashi = hash(n->word);
         //Input int to next address in node struct to connect hash table according to hash function
         n->next = table[hashi];
         //Insert node in hash table
