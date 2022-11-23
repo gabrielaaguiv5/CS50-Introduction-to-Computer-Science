@@ -23,8 +23,8 @@ node;
 //For function size
 int dsize = 0;
 
-//Error found when 26 letters of the alphabet, so expanded to 
-const unsigned int N = 10000;
+//Error found when 26 letters of the alphabet, so expanded to
+const unsigned int N = 2;
 
 // Hash table
 //Array of node pointers, each points to a node, for each letter of the alphabet
