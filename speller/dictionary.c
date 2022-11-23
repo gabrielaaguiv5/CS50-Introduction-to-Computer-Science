@@ -60,9 +60,9 @@ unsigned int hash(const char *word)
     long sword = 0;
     for (int i = 0; i < strlen(word); i++)
     {
-        sword += toupper(word[i]);
+        sword += tolower(word[i]);
     }
-    return (sword) % N;
+    return sword % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
