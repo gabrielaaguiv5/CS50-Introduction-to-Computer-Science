@@ -52,10 +52,20 @@ bool load(const char *dictionary)
         return false;
     }
     //To put memory in the node, for each word of the file
-    char n_word[LENGTH + 1];
+    char dword[LENGTH + 1];
     //Allocate memory for each new node to go to the hash table
     //Address of memory size of node into n
-    node *n = malloc(sizeof(node));
+    while(fscanf(file, "%s", dword != EOF)
+    {
+        node *n = malloc(sizeof(node));
+        if (!n)
+        {
+            return false;
+        }
+        strcpy (n->word)
+
+    }
+
 
 
 
