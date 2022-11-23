@@ -47,7 +47,7 @@ bool check(const char *word)
         {
             return true;
         }
-        m = m
+        m = m->next;
     }
     return false;
 }
