@@ -31,6 +31,9 @@ node *table[N];
 bool check(const char *word)
 {
     //We obtain hash value type int from the hash function
+    int hashi = hash(word);
+
+    node 
     return false;
 }
 
