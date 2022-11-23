@@ -4,6 +4,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include "dictionary.h"
@@ -61,7 +62,7 @@ unsigned int hash(const char *word)
 }
 
 //For function size
-int dsize = 0:
+int dsize = 0;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
@@ -124,7 +125,7 @@ bool unload(void)
         {
             return true;
         }
-        else if
+        else if (n != NULL)
         {
             node *tmp = n;
             n = n->next;
