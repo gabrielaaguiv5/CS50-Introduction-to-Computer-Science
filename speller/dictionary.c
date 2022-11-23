@@ -29,18 +29,19 @@ const unsigned int N = 26;
 node *table[N];
 
 // Returns true if word is in dictionary, else false
+int hashi = 0;
 bool check(const char *word)
 {
     //We obtain hash value type int from the hash function
-    int hashi = hash(word);
+    hashi = hash(word);
 
     //Going to place in the hash table
-    node *n = table[hashi];
+    node *m = table[hashi];
     //Going through array of linked list from hash table position
     //While position in the hash table
-    while (n != NULL)
+    while (m != NULL)
     {
-        if (strcasecmp(word, n-> word) == 0)
+        if (strcasecmp(word, m-> word) == 0)
         {
             return true;
         }
@@ -88,7 +89,7 @@ bool load(const char *dictionary)
         //Copy word scanned into word char of node struct
         strcpy (n->word, dword);
         //Get int from hash function to locate word scanned into hash table
-        int hashi = hash(dword);
+        hashi = hash(dword);
         //Input int to next address in node struct to connect hash table according to hash function
         n->next = table[hashi];
         //Insert node in hash table
