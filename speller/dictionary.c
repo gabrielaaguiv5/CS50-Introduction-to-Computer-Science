@@ -39,8 +39,12 @@ unsigned int hash(const char *word)
 {
     //With the use of the ASCII chart, reference: 2022, https://elcodigoascii.com.ar/codigos-ascii/espacio-codigo-ascii-32.html
 
-    
-    return toupper(word[0]) - 'A';
+    int sword = 0;
+    for (int i = 0; i < strlen(word); i++)
+    {
+        sword += toupper(word[i]);
+    }
+    return (sword - 'A') % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
