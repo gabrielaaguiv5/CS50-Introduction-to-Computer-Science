@@ -126,12 +126,10 @@ bool unload(void)
         {
             return true;
         }
-        else if (n != NULL)
-        {
-            node *tmp = n;
-            n = n->next;
-            free(tmp);
-        }
+        node *tmp = n;
+        n = n->next;
+        free(tmp);
+        
     }
     return false;
 }
