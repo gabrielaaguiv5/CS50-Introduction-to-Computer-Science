@@ -23,7 +23,7 @@ node;
 //For function size
 int dsize = 0;
 
-//26 letters of the alphabet
+//Error found when 26 letters of the alphabet, so expanded to 
 const unsigned int N = 10000;
 
 // Hash table
