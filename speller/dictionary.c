@@ -33,7 +33,10 @@ bool check(const char *word)
     //We obtain hash value type int from the hash function
     int hashi = hash(word);
 
-    node 
+    //Going to place in the hash table
+    node *n = table[hashi];
+    //Going through array of linked list from hash table position
+    
     return false;
 }
 
