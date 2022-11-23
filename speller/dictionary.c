@@ -26,6 +26,8 @@ node *table[N];
 
 //Create n type node
 node *n = malloc(sizeof(node));
+int main (void)
+{
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -89,4 +91,5 @@ bool unload(void)
 {
     // TODO
     return false;
+}
 }
