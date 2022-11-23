@@ -68,13 +68,13 @@ bool load(const char *dictionary)
 
         n->next = table[hashi];
 
-        
-
-
+        table[hashi] = n;
 
     }
 
-    return false;
+    fclose(file);
+
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
