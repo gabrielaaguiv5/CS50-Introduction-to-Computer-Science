@@ -123,14 +123,12 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *n = table[i];
-        if (n == NULL)
+        if (n =! NULL)
         {
-            return true;
+            node *tmp = n;
+            n = n->next;
+            free(tmp);
         }
-        node *tmp = n;
-        n = n->next;
-        free(tmp);
-
     }
-    return false;
+    return true;
 }
