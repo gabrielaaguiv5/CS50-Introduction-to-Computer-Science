@@ -81,7 +81,7 @@ bool load(const char *dictionary)
         table[hashi] = n;
 
         //Count of words in loop for function size
-        dsize ++;
+        dsize++;
 
     }
 
@@ -94,6 +94,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     //Print value of dsize from function load
+    if (dsize > 0)
+    {
+        return dsize;
+    }
     return 0;
 }
 
