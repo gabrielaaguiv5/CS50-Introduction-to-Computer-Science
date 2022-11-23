@@ -53,7 +53,7 @@ unsigned int hash(const char *word)
 {
     //With the use of the ASCII chart, reference: 2022, https://elcodigoascii.com.ar/codigos-ascii/espacio-codigo-ascii-32.html
     //For the type of hash table implementation, reference: 2022, https://pages.cs.wisc.edu/~siff/CS367/Notes/hash.html
-    int sword = 0;
+    long sword = 0;
     for (int i = 0; i < strlen(word); i++)
     {
         sword += toupper(word[i]);
