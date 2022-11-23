@@ -37,7 +37,8 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    
+    //With the use of the ASCII chart, reference: 
+
     return toupper(word[0]) - 'A';
 }
 
