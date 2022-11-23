@@ -47,7 +47,7 @@ bool check(const char *word)
         {
             return true;
         }
-        m = m->next;
+        m = m->next; //Moving all the hash table
     }
     return false;
 }
@@ -62,7 +62,7 @@ unsigned int hash(const char *word)
     {
         sword += tolower(word[i]);
     }
-    return sword % N;
+    return sword % N; //Position for each word in the hash table
 }
 
 // Loads dictionary into memory, returning true if successful, else false
