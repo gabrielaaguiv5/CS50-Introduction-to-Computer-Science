@@ -19,6 +19,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+//Create n type node
+node *n = malloc(sizeof(node));
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -36,7 +39,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    //True if load false if no memory 
+    //True if load false if no memory
 
     return false;
 }
