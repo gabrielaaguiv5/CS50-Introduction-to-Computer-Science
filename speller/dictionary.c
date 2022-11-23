@@ -44,7 +44,7 @@ unsigned int hash(const char *word)
     {
         sword += toupper(word[i]);
     }
-    return (sword - 'A') % N;
+    return (sword) % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
