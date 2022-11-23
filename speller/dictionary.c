@@ -79,7 +79,7 @@ bool load(const char *dictionary)
     char dword[LENGTH + 1];
     //Allocate memory for each new node to go to the hash table
     //Address of memory size of node into n
-    while(fscanf(file, "%s", dword) != EOF)
+    while (fscanf(file, "%s", dword) != EOF)
     {
         //Create new node for each word scanned
         node *n = malloc(sizeof(node));
@@ -88,7 +88,7 @@ bool load(const char *dictionary)
             return false;
         }
         //Copy word scanned into word char of node struct
-        strcpy (n->word, dword);
+        strcpy(n->word, dword);
         //Get int from hash function to locate word scanned into hash table
         hashi = hash(n->word);
         //Input int to next address in node struct to connect hash table according to hash function
