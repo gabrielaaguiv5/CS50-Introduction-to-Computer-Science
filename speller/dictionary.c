@@ -36,7 +36,7 @@ bool check(const char *word)
     //Going to place in the hash table
     node *n = table[hashi];
     //Going through array of linked list from hash table position
-    
+    //While position in 
     return false;
 }
 
