@@ -62,7 +62,9 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        strcpy (n->word)
+        strcpy (n->word, dword);
+
+        
 
     }
 
