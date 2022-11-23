@@ -22,7 +22,7 @@ node;
 
 // TODO: Choose number of buckets in hash table
 //26 letters of the alphabet
-const unsigned int N = 26;
+const unsigned int N = 10000;
 
 // Hash table
 //Array of node pointers, each points to a node, for each letter of the alphabet
