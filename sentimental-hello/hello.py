@@ -1,5 +1,7 @@
 # Hello world in python
 from cs50 import get_string
 
-answer = get_string("What's your name?")
-print(f"hello, {answer})
+#Get input ans save in variable answer
+answer = get_string("What's your name? ")
+#Print answer
+print(f"hello, {answer}")
