@@ -2,7 +2,7 @@ import re
 import sys
 import time
 
-from dictionary import check, load, size, unload
+from CS50_INTRO_Classes.dictionary import check, load, size, unload
 
 # Maximum length for a word
 # (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
