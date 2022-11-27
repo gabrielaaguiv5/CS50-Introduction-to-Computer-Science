@@ -2,12 +2,12 @@
 
 def main()
 cents = get_cents()
-quarters = calculate_quarters(cents)
-dimes = calculate_dimes(cents)
-nickels = calculate_nickels(cents)
-pennies = calculate_pennies(cents)
+quarters = calculate_quarters()
+dimes = calculate_dimes()
+nickels = calculate_nickels()
+pennies = calculate_pennies()
 
-coins = quartes + dimes + nickels + pennies
+coins = quarters + dimes + nickels + pennies
 
 def get_cents():
     while True:
@@ -16,14 +16,15 @@ def get_cents():
             break
     return cents
 
-def calculate_quarters(cents):
+def calculate_quarters():
     return cents/25
 
-def calculate_dimes(cents):
+def calculate_dimes():
+    
     return cents/10
 
-def calculate_nickels(cents):
+def calculate_nickels():
     return cents/5
 
-def calculate_pennies(cents):
+def calculate_pennies():
     return cents/1
