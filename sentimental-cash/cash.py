@@ -6,7 +6,7 @@ def main():
     quarters = cents//25
     dimes = (cents - (quarters*25))//10
     nickels = (cents - (dimes*10))//5
-    pennies = (cents - nickels)//1
+    pennies = (cents - (nickels*5))//1
 
     coins = quarters + dimes + nickels + pennies
     print(round(coins))
