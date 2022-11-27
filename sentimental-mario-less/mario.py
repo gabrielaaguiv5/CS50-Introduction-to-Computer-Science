@@ -11,7 +11,7 @@ def main():
             rows += 1
             print()
             for j in range(0, rows - 1, 1):
-                print("", end="")
+                print("#", end="")
     print()
 
 def get_height():
