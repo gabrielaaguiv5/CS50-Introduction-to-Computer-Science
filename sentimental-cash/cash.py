@@ -4,12 +4,12 @@ def main():
 
     cents = get_cents()
     quarters = cents/25
-    dimes = (cents - quarters)/10
-    nickels = (cents - dimes)/5
+    dimes = (cents - (quarters*25))/10
+    nickels = (cents - (dimes*10))/5
     pennies = (cents - nickels)/1
 
-    coins = quarters + dimes + nickels + pennies
-    print(coins)
+    coins = quarters
+    print(round(coins))
 
 
 def get_cents():
