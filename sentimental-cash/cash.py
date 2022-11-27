@@ -1,18 +1,16 @@
 # Cash in Python
+from cs50 import get_int
 
 def main():
 
-    q = cents + 1
+    for i in range(n):
+        print("#")
 
-    print(q)
-
-
+def get_cents():
     while True:
-        cents = int(input("Change owed: "))
-        if cents > 0:
+        n = int(input("Change owed: "))
+        if n > 0:
             break
-    return cents
-
-
+    return n
 
 main()
