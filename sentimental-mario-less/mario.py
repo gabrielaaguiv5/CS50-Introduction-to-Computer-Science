@@ -5,7 +5,7 @@ def main():
     for i in range(level-1):
         print(" ", end="#")
         print()
-        for j in range(level):
+        for j in range(level+1):
             print("#", end="")
         print()
 
