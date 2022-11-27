@@ -2,9 +2,9 @@
 
 def main():
     c = 0
-    rows = 0
+    rows = 1
     level = get_height()
-    for i in range(1, level, 1):
+    for i in range(1, rows, 1):
         c += 1
         for k in range(1, level-c, 1):
             print(" ", end="")
