@@ -7,7 +7,7 @@ def main():
         print()
         for j in range(level):
             print("#", end="")
-        cprint()
+        print()
 
 
 def get_height():
