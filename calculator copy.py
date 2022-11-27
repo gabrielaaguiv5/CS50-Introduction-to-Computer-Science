@@ -1,19 +1,14 @@
-import cs50
-
 try:
-    x = cs50.get_int("X: ")
-
-except:
+    x1 = int(input("X: "))
+except ValueError:
     print("This is not an int!")
     exit()
-
 try:
-    y = cs50.get_int("Y: ")
-
+    y1 = int(input("Y: "))
 except ValueError:
     print("This is not an int!")
     exit()
 
-z = x + y
+za = x1 + y1
 
-print(z)
+print(za)
