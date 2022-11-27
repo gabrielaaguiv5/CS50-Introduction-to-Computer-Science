@@ -10,6 +10,7 @@ def get_cents():
     while True:
         n = get_int("Change owed: ")
         if n > 0:
-            return n
+            break
+    return n
 
 main()
