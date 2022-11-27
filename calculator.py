@@ -1,4 +1,4 @@
-import cs50 get_int
+import cs50
 
 x = get_int("X: ")
 
