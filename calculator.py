@@ -1,8 +1,8 @@
 import cs50
 
-x = get_int("X: ")
+x = cs50.get_int("X: ")
 
-y = get_int("Y: ")
+y = cs50.get_int("Y: ")
 
 z = x + y
 
