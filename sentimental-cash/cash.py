@@ -1,7 +1,6 @@
 # Cash in Python
 
 def main():
-    cents = get_cents()
     quarters = calculate_quarters()
     dimes = calculate_dimes()
     nickels = calculate_nickels()
