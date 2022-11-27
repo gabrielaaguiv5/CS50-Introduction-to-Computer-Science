@@ -9,14 +9,13 @@ def main():
     coins = quarters + dimes + nickels + pennies
     print(coins)
 
-def get_cents():
     while True:
         cents = int(input("Change owed: "))
         if cents > 0:
             break
         return cents
 
-def calculate_quarters(cents):
+def calculate_quarters():
     return cents/25
 
 def calculate_dimes():
