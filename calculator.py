@@ -2,7 +2,7 @@ import cs50
 try:
     x = cs50.get_int("X: ")
 
-except ValueError:
+except:
     print("This is not an int!")
 
 try:
