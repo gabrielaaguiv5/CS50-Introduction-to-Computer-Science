@@ -2,7 +2,7 @@ import re
 import sys
 import time
 
-from CS50_INTRO_Problems.speller.dictionary import check, load, size, unload
+from speller.dictionary import check, load, size, unload
 
 # Maximum length for a word
 # (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
