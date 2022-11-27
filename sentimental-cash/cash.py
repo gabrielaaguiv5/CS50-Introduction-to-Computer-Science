@@ -15,7 +15,7 @@ def main():
             break
         return cents
 
-def calculate_quarters():
+def calculate_quarters(cents):
     return cents/25
 
 def calculate_dimes():
