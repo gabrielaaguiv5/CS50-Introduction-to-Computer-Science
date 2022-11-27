@@ -10,5 +10,7 @@ except ValueError:
     exit()
 
 za = x1 + y1
+z =x1/y1
 
 print(za)
+print(z)
