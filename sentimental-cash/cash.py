@@ -8,28 +8,27 @@ def main():
             break
     return cents
 
-    quarters = calculate_quarters()
-    dimes = calculate_dimes()
-    nickels = calculate_nickels()
-    pennies = calculate_pennies()
-
-    coins = quarters + dimes + nickels + pennies
-    print(coins)
-
-def calculate_quarters():
+def quarters():
     cents = cents
-    return cents/25
+    quarters = cents/25
+    return quarters
 
-def calculate_dimes():
+def dimes():
     cents = cents - (quarters * 25)
-    return cents/10
+    dimes = cents/10
+    return dimes
 
-def calculate_nickels():
+def nickels():
     cents = cents - (dimes * 10)
-    return cents/5
+    nickels = cents/5
+    return nickels
 
-def calculate_pennies():
+def pennies():
     cents = cents - (nickels * 5)
-    return cents/1
+    pennies = cents/1
+    return pennies
+
+coins = quarters + dimes + nickels + pennies
+    print(coins)
 
 main()
