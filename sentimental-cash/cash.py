@@ -1,4 +1,6 @@
 # Cash in Python
 
-cents = get_cents()
+cents = int(input("Change Owed: ")
+
+while cents > 0:
 
