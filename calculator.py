@@ -1,4 +1,3 @@
-
 try:
     x1 = int(input("X: "))
 except ValueError:
