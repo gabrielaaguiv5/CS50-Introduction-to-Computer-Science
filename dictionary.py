@@ -1,0 +1,3 @@
+words = dict()
+
+def check
