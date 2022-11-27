@@ -1,6 +1,8 @@
 # Mario in Python
 
 def main():
+    c = 0
+    rows = 0
     level = get_height()
     for i in range(1, level, 1):
         c += 1
