@@ -3,7 +3,7 @@
 def main():
     level = get_height()
     for i in range(level-1):
-        print(" ", end="#")
+        print(" ", end="")
         print()
         for j in range(level):
             print("#", end="")
