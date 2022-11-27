@@ -3,10 +3,10 @@
 def main():
     level = get_height()
     for i in range(1, level, 1):
-        c = c + 1
+        c += 1
         for k in range(1, level-c, 1):
             print(" ", end="")
-            rows = rows + 1
+            rows += 1
             for j in range(0, rows - 1, 1):
                 print("#", end="")
         print()
