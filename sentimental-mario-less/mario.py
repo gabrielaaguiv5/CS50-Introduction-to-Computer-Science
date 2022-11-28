@@ -3,7 +3,7 @@
 def main():
     level = get_height()
     for row in range(1, level+1):
-        for spaces in range(level+1-row):
+        for spaces in range(level-row):
             print(" ", end="")
 
         for stars in range(row):
