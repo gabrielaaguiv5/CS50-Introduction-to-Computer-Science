@@ -10,7 +10,7 @@ N = 1000
 
 def main():
 
-    # Ensure correct usage
+    # Ensure correct usage, input is compile to run the program and name of csv file
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
