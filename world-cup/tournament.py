@@ -15,7 +15,7 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    filename = sys.argv[1]
+    filename = sys.argv[1]  # Get name of file to 
     with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
