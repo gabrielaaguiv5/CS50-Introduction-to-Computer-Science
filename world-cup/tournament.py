@@ -15,21 +15,21 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    filename = sys.argv[1]  # Get name of file to
-    with open(filename) as file:
+    filename = sys.argv[1]  # Get name of file to open it with open function
+    with open(filename) as file:  # Open file, dont use "r" because of conversion to int og rating
         reader = csv.DictReader(file)
         for row in reader:
-            row["rating"] = int(row["rating"])
-            teams.append(row)
+            row["rating"] = int(row["rating"])  # Convert strings of rating into ints
+            teams.append(row) #  Insert row set into teams[]
 
 
     counts = {}
     for i in range(N):
-        winner = simulate_tournament(teams)
+        winner = simulate_tournament(teams)  # Get winner of round N
         if winner in counts:
-            counts[winner] =+ 1
+            counts[winner] += 1  # For teams who have already won
         else:
-            counts[winner] = 1
+            counts[winner] = 1  # For first time winners
 
 
     # Print each team's chances of winning, according to simulation
@@ -62,8 +62,8 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     while len(teams) > 1:
-        teams = simulate_round(teams)
-    return teams[0]["team"]
+        teams = simulate_round(teams)  # Dont stop simulation until only one winner
+    return teams[0]["team"]  # Name to keep count of wins
 
 
 if __name__ == "__main__":
