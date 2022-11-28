@@ -20,8 +20,7 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             row["rating"] = int(row["rating"])  # Convert strings of rating into ints
-            teams.append(row) #  Insert row set into teams[]
-
+            teams.append(row)  # Insert row set into teams[]
 
     counts = {}
     for i in range(N):
@@ -30,7 +29,6 @@ def main():
             counts[winner] += 1  # For teams who have already won
         else:
             counts[winner] = 1  # For first time winners
-
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
