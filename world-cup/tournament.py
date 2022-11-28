@@ -16,7 +16,7 @@ def main():
 
     teams = []
     filename = sys.argv[1]
-    with open(filename, "r") as file:
+    with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
             row["rating"] = int(row["rating"])
