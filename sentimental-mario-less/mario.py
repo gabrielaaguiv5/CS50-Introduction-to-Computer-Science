@@ -2,12 +2,13 @@
 
 def main():
     level = get_height()
-    for row in range(level):
-        for spaces in range(level-row):
-            print("1", end="")
+    for row in range(1, level+1):
+        for spaces in range(level+1-row):
+            print(" ", end="")
+
         for stars in range(row):
             print("#", end="")
-    print()
+        print()
 
 def get_height():
     while True:
