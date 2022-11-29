@@ -23,23 +23,12 @@ def main():
         dna = file.read()
 
     # Find longest match of each STR in DNA sequence
-    for i in range(1, len(data.fieldnames)):
-     = longest_match(dna, "AGATC")
-    b = longest_match(dna, "TTTTTTCT")
-    c = longest_match(dna, "AATG")
-    e = longest_match(dna, "TCTAG")
-    f = longest_match(dna, "GATA")
-    g = longest_match(dna, "TATC")
-    h = longest_match(dna, "GAAA")
-    i = longest_match(dna, "TCTG")
+
 
 
 
     # Check database for matching profiles
-    for person in data:
-        if data[1, 2, 3, 4, 5, 6, 7, 8] == data[a, b, c, e, f, g, h, i]:
-            return data[0]
-            print(data[0])
+     
 
 
 def longest_match(sequence, subsequence):
