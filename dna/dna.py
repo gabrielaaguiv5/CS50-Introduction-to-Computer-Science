@@ -4,7 +4,7 @@ import sys
 
 def main():
 
-    if len(sys.argv) < 2:
+    if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py data.csv sequence.txt")
 
     # Read database file into a variable
@@ -16,11 +16,7 @@ def main():
             row["AGATC"] = int(row["AGATC"])
             row["TTTTTTCT"] = int(row["TTTTTTCT"])
             row["AATG"] = int(row["AATG"])
-            row["TCTAG"] = int(row["TCTAG"])
-            row["GATA"] = int(row["GATA"])
-            row["TATC"] = int(row["TATC"])
-            row["GAAA"] = int(row["GAAA"])
-            row["TCTG"] = int(row["TCTG"])
+            row["TCTAG"] = int(row["T
             data.append(row)
 
     # Read DNA sequence file into a variable
