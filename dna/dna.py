@@ -33,8 +33,8 @@ def main():
     for person in database:
         found = 0
         for STR in STRS:
-            if int(person[STR]) == longest[STR]
-            found = found + 1
+            if int(person[STR]) == longest[STR]:
+                found = found + 1
         if found == len(STRS):
             print(person["name"])
 
