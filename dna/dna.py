@@ -14,23 +14,19 @@ def main():
         reader = csv.DictReader(file)  # Read file matching header information
         for row in reader:
             database.append(row)  # Inserts each new row to the end of the list
-        print(database)
 
     # Read DNA sequence file into a variable
     dna = 0  # Declaring variable to store dna sequence in. Soon to be input for longest match
     filename2 = sys.argv[2]
     with open(filename2) as file:
         dna = file.read()  # Strores entire file with no header distinction
-    print(dna)
 
     # Find longest match of each STR in DNA sequence
     STRS = list(database[0].keys())[1:]  # Getting header strings from 1 to exclude "name" column
-    print(STRS)
 
     longest = {}  # Dictionary to store match for each STRS
     for STR in STRS:
         longest[STR] = longest_match(dna, STR)  # Input of dna, the txt file, and STR, the headers in the database
-    print(longest)
 
     # Check database for matching profiles
     for data in database:  # Helps iterate each person stored in database, works as "i" in loop
