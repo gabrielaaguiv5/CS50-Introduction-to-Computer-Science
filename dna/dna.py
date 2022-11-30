@@ -20,23 +20,26 @@ def main():
     dna = 0  # Declaring variable to store dna sequence in. Soon to be input for longest match
     filename2 = sys.argv[2]
     with open(filename2) as file:
-        dna = file.read() 
+        dna = file.read()  # Strores entire file with no header distinction
+    print(dna)
 
     # Find longest match of each STR in DNA sequence
-    STRS = list(database[0].keys())[1:]
+    STRS = list(database[0].keys())[1:]  # Getting header strings from 1 to exclude "name" column
+    print(STRS)
 
-    longest = {}
+    longest = {}  # Dictionary to store match for each STRS
     for STR in STRS:
-        longest[STR] = longest_match(dna, STR)
+        longest[STR] = longest_match(dna, STR)  # Input of dna, the txt file, and STR, the headers in the database
+    print(longest)
 
     # Check database for matching profiles
-    for person in database:
+    for data in database:  # Helps iterate each person stored in database, works as "i" in loop
         found = 0
-        for STR in STRS:
-            if int(person[STR]) == longest[STR]:
-                found = found + 1
+        for STR in STRS:  # Itarates in STRS list to match with database headers
+            if int(data[STR]) == longest[STR]:
+                found = found + 1  # Counts when match in between list data[STR] and longest[STR]
         if found == len(STRS):
-            print(person["name"])
+            print(data["name"])  # Whole data (person in database) has to match with STRS for a match to be declared
             return
 
     print("No match")
