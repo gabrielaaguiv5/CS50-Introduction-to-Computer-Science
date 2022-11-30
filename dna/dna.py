@@ -14,7 +14,6 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             database.append(row)
-        print(database)
 
     # Read DNA sequence file into a variable
     dna = 0
@@ -39,11 +38,9 @@ def main():
             found = found + 1
         if found == len(STRS):
             print(person["name"])
-        else:
-            print("No Match")
-            return
 
-
+    print("No Match")
+    return
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
