@@ -27,6 +27,10 @@ def main():
         STRS = list(data)
         print(list)
 
+    longest = []
+    for STR in STRS:
+        longest.append()
+
     # Check database for matching profiles
 
 
