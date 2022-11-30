@@ -22,7 +22,7 @@ def main():
         dna = file.read()
 
     # Find longest match of each STR in DNA sequence
-    for data in range (1, len(database)):
+    for data in database:
         STRS = list(data)
 
     longest = {}
