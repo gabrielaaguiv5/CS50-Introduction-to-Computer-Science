@@ -27,11 +27,21 @@ def main():
         STRS = list(data)
         print(list)
 
-    longest = []
+    longest = {}
     for STR in STRS:
-        longest.append()
+        longest[STR] = longest_match(dna, STR)
 
     # Check database for matching profiles
+    for person in database:
+        found = 0
+        for STR in STRS:
+            if int(person[STR]) == longest[STR]
+            found = found + 1
+        if found == len(STRS):
+            print(person["name"])
+        else:
+            print("No Match")
+            return
 
 
 
