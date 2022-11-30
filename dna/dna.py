@@ -36,8 +36,9 @@ def main():
                 found = found + 1
         if found == len(STRS):
             print(person["name"])
-    if found != len(STRS):
-        print("No Match")
+            return
+
+    print("No")
 
 
 def longest_match(sequence, subsequence):
