@@ -8,13 +8,13 @@ def main():
         sys.exit("Usage: python dna.py data.csv sequence.txt")
 
     # Read database file into a variable
-    data = []
+    database = []
     filename = sys.argv[1]
     with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            data.append(row)
-        print(data)
+            database.append(row)
+        print(database)
 
     # Read DNA sequence file into a variable
     dna = 0
@@ -23,9 +23,9 @@ def main():
         dna = file.read()
 
     # Find longest match of each STR in DNA sequence
-    STRS = list
-
-
+    for data in database:
+        STRS = list(data)
+        print(list)
 
     # Check database for matching profiles
 
