@@ -38,7 +38,7 @@ def main():
             print(data["name"])  # Whole data (person in database) has to match with STRS for a match to be declared
             return
 
-    print("No match")
+    print("No match")  # If the result of longest doesnt match anybody on the database
 
 
 def longest_match(sequence, subsequence):
