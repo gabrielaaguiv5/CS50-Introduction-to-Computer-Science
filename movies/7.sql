@@ -1,1 +1,1 @@
-SELECT m.title 
+SELECT m.title, r.rating FROM movies m INNER JOIN ratings r on m.id = r.movie_id WHERE year = "2010" ORDER BY rating DESC;
