@@ -1,1 +1,1 @@
-SELECT title FROM movies WHERE id IN ()
+SELECT title FROM movies WHERE id IN (movie_id FROM stars WHERE person_id IN (SELECT id FROM people WHERE name = "Chadwick Boseman", id IN ()))
