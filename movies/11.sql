@@ -1,1 +1,1 @@
-SELECT title FROM movies WHERE id IN (SELECT movie_id FROM stars WHERE person_id = (SELECT id FROM people WHERE name = "Chadwick Boseman"));
+SELECT title FROM movies WHERE id IN (SELECT m.movie_id, r.rating FROM movies m INNER JOIN ratings r on m.id = r.movie_id WHERE person_id = (SELECT id FROM people WHERE name = "Chadwick Boseman"));
