@@ -1,1 +1,2 @@
+# Search title from movies table, where name from people table, given person_id and movie_id in stars table, is both Johnny Deep and Helena Bonham Carter.
 SELECT title FROM movies JOIN stars ON stars.movie_id = movies.id WHERE person_id IN (SELECT id FROM people WHERE name = "Johnny Depp") AND title in (SELECT title FROM movies JOIN stars ON stars.movie_id = movies.id WHERE person_id IN (SELECT id FROM people WHERE name = "Helena Bonham Carter"));

@@ -1,2 +1,2 @@
-# Search name from people table, where id in movies tables given movie_id from stars 
+# Search name from people table, where id in movies tables given movie_id from stars includes name from people table as Kevin Bacon, according to people_id from stars table.
 SELECT name FROM people JOIN stars ON stars.person_id = people.id JOIN movies ON movies.id = stars.movie_id WHERE movies.id IN (SELECT id FROM movies WHERE id IN (SELECT movie_id FROM stars WHERE person_id IN (SELECT id FROM people WHERE name = "Kevin Bacon" AND birth = 1958))) AND people.name != "Kevin Bacon";

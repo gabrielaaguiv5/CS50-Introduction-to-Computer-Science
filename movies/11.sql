@@ -1,1 +1,2 @@
+# Search title from movies table, where name from people, given movies_id and person_id from stars, is Chadwick Boseman, ordered highest to lowest by rating from ratings table, with a 5 answers limit.
 SELECT title FROM movies JOIN stars ON stars.movie_id = movies.id JOIN ratings ON ratings.movie_id = movies.id WHERE person_id = (SELECT id FROM people WHERE name = "Chadwick Boseman") ORDER BY rating DESC LIMIT 5;
