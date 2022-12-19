@@ -1,1 +1,2 @@
+# Search title from movies table and rating from ratings table, where year from movie table is 2010 and from highest to lowest rating from ratings table.
 SELECT m.title, r.rating FROM movies m INNER JOIN ratings r on m.id = r.movie_id WHERE year = "2010" ORDER BY rating DESC, title ASC;

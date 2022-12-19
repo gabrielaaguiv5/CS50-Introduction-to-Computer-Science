@@ -1,1 +1,2 @@
+# Search name from people table, where title from movies table, given stars table, is Toy Story.
 SELECT name FROM people WHERE id IN (SELECT person_id FROM stars WHERE movie_id IN (SELECT id FROM movies WHERE title LIKE "%Toy Story%"));
