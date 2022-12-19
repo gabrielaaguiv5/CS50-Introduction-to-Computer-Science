@@ -1,1 +1,1 @@
-SELECT name FROM people JOIN stars ON stars.person_id = people.id JOIN movies ON movies.id = stars.movie_id WHERE movie_id IN (SELECT id FROM movies WHERE name = "Kevin Bacon");
+SELECT name FROM people JOIN stars ON stars.person_id = people.id JOIN movies ON movies.id = stars.movie_id WHERE movie_id IN (SELECT id FROM movies WHERE name LIKE "Kevin Bacon");
