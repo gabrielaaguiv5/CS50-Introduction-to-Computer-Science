@@ -83,8 +83,10 @@ SELECT airports.full_name
   FROM airports
   JOIN flights
     ON airports.id = flights.destination_airport_id
- WHERE airports.id = 36;
+ WHERE flights.id = 36;
 
-
+SELECT city
+  FROM airports
+ WHERE full_name = "LaGuardia Airport";
 
 
