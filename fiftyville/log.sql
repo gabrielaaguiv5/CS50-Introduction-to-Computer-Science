@@ -34,4 +34,5 @@ SELECT license_plate, activity
    AND minute = 35;
 
 SELECT id, name
-  FROM 
+  FROM people
+ WHERE license_plate = "
