@@ -15,7 +15,7 @@ SELECT description
 
 -- The investigation continues with the content from the interviews mentioned in the crime scene reports, following the keyword "bakery" in the transcripts.
 
--- Accessing
+-- Accessing to the information from the interview transcripts of the day of the crime, with filter to find the word "bakery" in the transcripts.
 SELECT name, transcript
   FROM interviews
  WHERE day = 28
