@@ -11,4 +11,8 @@ SELECT description
    AND year = 2021
    AND street = "Humphrey Street";
 
--- The description of the crime scene reports from the 28th of July 2021, Humphrey Street, depicted two different crimes: The CS50 duck theft at 10:15am 
+-- The description of the crime scene reports from the 28th of July 2021, Humphrey Street, depicted two different crimes: The CS50 duck theft at 10:15am and Littering to the place at 16:36pm.
+
+-- The investigation continues with the content from the interviews mentioned in the crime scene reports, following the keyword "bakery" in the transcripts.
+
+-- 
