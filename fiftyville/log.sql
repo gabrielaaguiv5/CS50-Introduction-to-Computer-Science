@@ -22,3 +22,5 @@ SELECT name, transcript
    AND month = 7
    AND year = 2021
    AND transcript LIKE "%bakery%";
+
+-- Following with 
