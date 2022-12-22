@@ -41,7 +41,7 @@ SELECT id, name
  SELECT bank_accounts.person_id, atm_transactions.account_number
    FROM atm_transactions
    JOIN bank_accounts
-     ON atm_transaction.account_number = bank_accounts.account_number
+     ON atm_transactions.account_number = bank_accounts.account_number
   WHERE day = 28
     AND month = 7
     AND year = 2021
