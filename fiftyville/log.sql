@@ -38,7 +38,7 @@ SELECT id, name
  WHERE license_plate = "1106N58";
 
  -- Following up with the account number.
- SELECT account_number, 
+ SELECT account_number, transaction_type
    FROM atm_transactions
   WHERE day = 28
     AND month = 7
