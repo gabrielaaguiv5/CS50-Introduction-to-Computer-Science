@@ -21,4 +21,4 @@ SELECT name, transcript
  WHERE day = 28
    AND month = 7
    AND year = 2021
-   AND transcript LIKE %bakery%;
+   AND transcript LIKE "%bakery%";
