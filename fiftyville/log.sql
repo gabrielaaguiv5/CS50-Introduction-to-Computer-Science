@@ -9,3 +9,5 @@ SELECT description
  WHERE month = 7
    AND day = 28
    AND street = "Humphrey Street";
+
+-- 
