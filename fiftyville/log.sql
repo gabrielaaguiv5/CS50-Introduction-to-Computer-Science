@@ -42,11 +42,18 @@ SELECT id, name
    FROM atm_transactions
    JOIN bank_accounts
      ON atm_transactions.account_number = bank_accounts.account_number
+   JOIN people
+     ON bank_accounts.person_id = people.id
   WHERE day = 28
     AND month = 7
     AND year = 2021
     AND atm_location = "Leggett Street"
-    AND transaction_type = "withdraw";
+    AND transaction_type = "withdraw"
+    AND license_plate = "1106N58";
+
+-- Following this investigation there is one match "Taylor", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
+
+
 
 
 
