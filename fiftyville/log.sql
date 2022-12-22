@@ -23,4 +23,15 @@ SELECT name, transcript
    AND year = 2021
    AND transcript LIKE "%bakery%";
 
--- Following with 
+-- Following the testimonies from witnesses Ruth and Eugene, with cross examination of car license plate and account number.
+-- First with the license plate.
+SELECT license_plate, activity
+  FROM bakery_security_logs
+ WHERE day = 28
+   AND month = 7
+   AND year = 2021
+   AND hour = 10
+   AND minute = 35;
+
+SELECT id, name
+  FROM 
