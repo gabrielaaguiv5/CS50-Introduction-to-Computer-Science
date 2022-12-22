@@ -75,11 +75,16 @@ SELECT passport_number
   FROM people
  WHERE id = 449774;
 
- SELECT flight_id
-   FROM passengers
-  WHERE passport_number = 1988161715;
+SELECT flight_id
+  FROM passengers
+ WHERE passport_number = 1988161715;
 
-  SELECT destination_airport_id
-  
+SELECT airports.full_name
+  FROM airports
+  JOIN flights
+    ON airports.id = flights.destination_airport_id
+ WHERE flights.destination_airport_id = 36;
+
+
 
 
