@@ -10,4 +10,4 @@ SELECT description
    AND day = 28
    AND street = "Humphrey Street";
 
--- 
+-- The description of the crime scene reports 
