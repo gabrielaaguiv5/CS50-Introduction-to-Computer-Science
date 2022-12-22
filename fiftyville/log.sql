@@ -71,6 +71,12 @@ SELECT id, name
  WHERE phone_number = "(676) 555-6554";
 
 -- Accomplice goes by James, id = 250277. With this information we can track the city of escape.
+SELECT passport_number
+  FROM people
+ WHERE id = 449774;
 
+ SELECT flight_id
+   FROM passengers
+  WHERE passport_number = 1988161715;
 
 
