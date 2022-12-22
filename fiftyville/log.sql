@@ -8,6 +8,7 @@ SELECT description
   FROM crime_scene_reports
  WHERE month = 7
    AND day = 28
+   AND year = 2021
    AND street = "Humphrey Street";
 
--- The description of the crime scene reports 
+-- The description of the crime scene reports from the 28th of July
