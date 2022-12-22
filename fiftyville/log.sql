@@ -38,7 +38,7 @@ SELECT id, name
  WHERE license_plate = "1106N58";
 
  -- Following up with the account number.
- SELECT bank_accounts.person_id, account_number
+ SELECT bank_accounts.person_id, atm_transactions.account_number
    FROM atm_transactions
    JOIN bank_accounts
      ON atm_transaction.account_number = bank_accounts.account_number
