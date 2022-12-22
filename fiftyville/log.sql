@@ -38,12 +38,11 @@ SELECT id, name
  WHERE license_plate = "1106N58";
 
  -- Following up with the account number.
- SELECT account_number
+ SELECT account_number, 
    FROM atm_transactions
   WHERE day = 28
     AND month = 7
     AND year = 2021
-    AND atm_location = "Leggett Street"
-    AND 
+    AND atm_location = "Leggett Street";
 
 
