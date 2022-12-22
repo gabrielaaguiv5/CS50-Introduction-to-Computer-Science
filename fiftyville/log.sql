@@ -46,4 +46,8 @@ SELECT id, name
     AND atm_location = "Leggett Street"
     AND transaction_type = "withdraw";
 
+SELECT person_id
+  FROM bank_accounts
+ WHERE account
+
 
