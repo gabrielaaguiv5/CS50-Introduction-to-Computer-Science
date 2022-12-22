@@ -83,7 +83,7 @@ SELECT airports.full_name
   FROM airports
   JOIN flights
     ON airports.id = flights.destination_airport_id
- WHERE flights.destination_airport_id = 36;
+ WHERE airports.id = 36;
 
 
 
