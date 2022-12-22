@@ -35,4 +35,10 @@ SELECT license_plate, activity
 
 SELECT id, name
   FROM people
- WHERE license_plate = "
+ WHERE license_plate = "1106N58";
+
+ -- Following up with the account number.
+ SELECT account_number
+   FROM 
+
+
