@@ -39,6 +39,11 @@ SELECT id, name
 
  -- Following up with the account number.
  SELECT account_number
-   FROM 
+   FROM atm_transactions
+  WHERE day = 28
+    AND month = 7
+    AND year = 2021
+    AND atm_location = "Leggett Street"
+    
 
 
