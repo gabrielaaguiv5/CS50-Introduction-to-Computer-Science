@@ -15,4 +15,10 @@ SELECT description
 
 -- The investigation continues with the content from the interviews mentioned in the crime scene reports, following the keyword "bakery" in the transcripts.
 
--- 
+-- Accessing
+SELECT name, transcript
+  FROM interviews
+ WHERE day = 28
+   AND month = 7
+   AND year = 2021
+   AND transcript LIKE %bakery%;
