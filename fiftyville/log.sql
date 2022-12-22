@@ -56,15 +56,21 @@ SELECT id, name
 -- We proceed with the discovery of the accomplice and the city of escape, following Raymond testimony.
 SELECT phone_number
   FROM people
- WHERE id = 449
+ WHERE id = 449774;
 
 SELECT receiver, duration
   FROM phone_calls
- WHERE caller = "Taylor"
+ WHERE caller = "(286) 555-6063"
    AND day = 28
    AND month = 7
    AND year = 2021;
 
+-- Given the duration of the call (in seconds), and the witness statement, phone number (676) 555-6554 is the accomplice.
+SELECT id, name
+  FROM people
+ WHERE phone_number = "(676) 555-6554";
+
+-- Accomplice goes by James, id = 250277. With this information we can track the city of escape.
 
 
 
