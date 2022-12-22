@@ -54,7 +54,13 @@ SELECT id, name
 -- Following this investigation there is one match "Taylor", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
 
 -- We proceed with the discovery of the accomplice and the city of escape, following Raymond testimony.
-SELECT 
+SELECT receiver
+  FROM phone_calls
+ WHERE caller = "Taylor"
+   AND day = 28
+   AND month = 7
+   AND year = 2021
+   AND duration < 1;
 
 
 
