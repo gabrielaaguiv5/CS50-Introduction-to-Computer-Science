@@ -79,4 +79,7 @@ SELECT passport_number
    FROM passengers
   WHERE passport_number = 1988161715;
 
+  SELECT destination_airport_id
+  
+
 
