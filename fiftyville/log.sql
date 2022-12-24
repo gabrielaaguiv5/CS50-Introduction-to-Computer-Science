@@ -25,12 +25,13 @@ SELECT name, transcript
 
 -- Following the testimonies from witnesses Ruth and Eugene, with cross examination of car license plate and account number.
 -- First with the license plate.
-SELECT description
-  FROM crime_scene_reports
- WHERE month = 7
-   AND day = 28
+SELECT license_plate, activity
+  FROM bakery_security_logs
+ WHERE day = 28
+   AND month = 7
    AND year = 2021
-   AND street = "Humphrey Street";
+   AND hour = 10
+   AND minute = 25;
 
 SELECT id, name
   FROM people
