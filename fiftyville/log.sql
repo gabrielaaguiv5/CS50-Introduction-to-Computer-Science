@@ -77,7 +77,7 @@ SELECT flights.id, name
    AND year = 2021
    AND hour > 10;
 
--- With 
+-- With the passengers on flights that took place the day of the robbery after the time of the robbery the suspect list reduces to "Bruce, Diana and Taylor"
 
 SELECT airports.full_name
   FROM airports
