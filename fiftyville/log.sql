@@ -80,7 +80,23 @@ ORDER BY hour ASC;
 -- With the passengers on flights that took place the day after the robbery, order by time to get the earliest flight the suspect list reduces to Bruce.
 
 -- We proceed to track the accomplice with the information of Bruce.
-SELECT receiver, name 
+SELECT phone_number
+  FROM people
+ WHERE name = "Bruce";
+
+ SELECT receiver, name
+   FROM phone_calls
+   JOIN people
+     ON phone_calls.receiver = people.phone_number
+  WHERE caller = "(367) 555-5533"
+    AND day = 28
+    AND month = 7
+    AND year = 2021
+    AND duration < 60;
+
+-- This investigation produces only one name, Robin, the culprit's accomplice.
+
+-- We finish by investigating the city of elopment of the culprit.
 
 SELECT airports.full_name
   FROM airports
