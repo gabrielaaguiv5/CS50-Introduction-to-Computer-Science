@@ -66,13 +66,6 @@ SELECT caller, name
 -- Given the duration of the call (in seconds), and the witness statement, our suspect list reduces to "Bruce, Diana and Taylor".
 
 -- We should follow up now with the suspects who got on a flight on the day of the robbery.
-
-
--- Accomplice goes by James, id = 250277. With this information we can track the city of escape.
-SELECT passport_number
-  FROM people
- WHERE id = 449774;
-
 SELECT flight_id
   FROM passengers
  WHERE passport_number = 1988161715;
