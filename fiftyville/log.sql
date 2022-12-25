@@ -25,14 +25,15 @@ SELECT name, transcript
 
 -- Following the testimonies from witnesses Ruth and Eugene, with cross examination of car license plate and account number.
 -- First with the license plate.
-SELECT license_plate, activity, name
+SELECT bakery_security_logs.license_plate, activity, name
+  FROM bakery_security_logs
   JOIN people
-    ON bakery_scurity_logs.license_plate = people.license_plate
+    ON bakery_security_logs.license_plate = people.license_plate
  WHERE day = 28
    AND month = 7
    AND year = 2021
    AND hour = 10
-   AND minute = 25;
+   AND 15 < minute < 25;
 
 SELECT id, name
   FROM people
