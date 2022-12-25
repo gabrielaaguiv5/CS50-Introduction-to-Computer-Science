@@ -39,7 +39,7 @@ SELECT bakery_security_logs.license_plate, activity, name
 -- With these results we now have nine suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey and Taylor. We will filter this list with the result of investigating the other witnesses statements.
 
 -- Following up with the account withdraw and account number.
- SELECT bank_accounts.person_id, atm_transactions.account_number
+ SELECT bank_accounts.person_id, atm_transactions.account_number, name
    FROM atm_transactions
    JOIN bank_accounts
      ON atm_transactions.account_number = bank_accounts.account_number
@@ -49,8 +49,7 @@ SELECT bakery_security_logs.license_plate, activity, name
     AND month = 7
     AND year = 2021
     AND atm_location = "Leggett Street"
-    AND transaction_type = "withdraw"
-    AND license_plate = "1106N58";
+    AND transaction_type = "withdraw";
 
 -- Following this investigation there is one match "Taylor", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
 
