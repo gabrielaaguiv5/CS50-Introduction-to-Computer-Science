@@ -38,7 +38,7 @@ SELECT bakery_security_logs.license_plate, activity, name
 
 -- With these results we now have nine suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey and Taylor. We will filter this list with the result of investigating the other witnesses statements.
 
--- Following up with the account withdraw.
+-- Following up with the account withdraw and account number.
  SELECT bank_accounts.person_id, atm_transactions.account_number
    FROM atm_transactions
    JOIN bank_accounts
