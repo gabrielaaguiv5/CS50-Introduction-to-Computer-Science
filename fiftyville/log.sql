@@ -79,7 +79,8 @@ ORDER BY hour ASC;
 
 -- With the passengers on flights that took place the day after the robbery, order by time to get the earliest flight the suspect list reduces to Bruce.
 
--- We proceed to track 
+-- We proceed to track the accomplice with the information of Bruce.
+SELECT receiver, name 
 
 SELECT airports.full_name
   FROM airports
