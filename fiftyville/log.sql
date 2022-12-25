@@ -102,7 +102,10 @@ SELECT airports.full_name
   FROM airports
   JOIN flights
     ON airports.id = flights.destination_airport_id
- WHERE flights.id = 36;
+ WHERE flights.id = 36
+   AND day = 29
+   AND month = 7
+   AND year = 2021;
 
 SELECT city
   FROM airports
