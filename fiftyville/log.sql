@@ -74,8 +74,7 @@ SELECT flights.id, name
     ON passengers.passport_number = people.passport_number
  WHERE day = 28
    AND month = 7
-   AND year = 2021
-   AND hour > 10;
+   AND year = 2021;
 
 -- With the passengers on flights that took place the day of the robbery after the time of the robbery the suspect list reduces to "Bruce, Diana and Taylor"
 
