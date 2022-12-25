@@ -77,6 +77,8 @@ SELECT flights.id, name
    AND year = 2021
    AND hour > 10;
 
+-- 
+
 SELECT airports.full_name
   FROM airports
   JOIN flights
