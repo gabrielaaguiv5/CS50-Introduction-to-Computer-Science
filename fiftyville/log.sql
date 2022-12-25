@@ -115,4 +115,4 @@ SELECT city
   FROM airports
  WHERE full_name = "LaGuardia Airport";
 
-
+-- As a conclusion, the culprit is determined as Bruce, accomplice Robin, city of escape New York.
