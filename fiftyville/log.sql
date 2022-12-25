@@ -67,6 +67,7 @@ SELECT caller, name
 
 -- We should follow up now with the suspects who got on a flight on the day of the robbery.
 
+
 -- Accomplice goes by James, id = 250277. With this information we can track the city of escape.
 SELECT passport_number
   FROM people
