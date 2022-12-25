@@ -72,9 +72,12 @@ SELECT caller, name
       ON passengers.flight_id = flights.id
     JOIN people
       ON passengers.passport_number = people.passport_number
+    JOIN airports
+      ON airports.id = flights.origin_airport_id
    WHERE day = 29
      AND month = 7
      AND year = 2021
+     AND city = "Fiftyville"
 ORDER BY hour ASC;
 
 -- With the passengers on flights that took place the day after the robbery, order by time to get the earliest flight the suspect list reduces to Bruce.
