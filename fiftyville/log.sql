@@ -66,17 +66,20 @@ SELECT caller, name
 -- Given the duration of the call (in seconds), and the witness statement, our suspect list reduces to "Bruce, Diana and Taylor".
 
 -- We should follow up now with the suspects who got on a flight on the day of the robbery.
-SELECT flights.id, name
-  FROM flights
-  JOIN passengers
-    ON passengers.flight_id = flights.id
-  JOIN people
-    ON passengers.passport_number = people.passport_number
- WHERE day = 28
-   AND month = 7
-   AND year = 2021;
+  SELECT flights.id, name
+    FROM flights
+    JOIN passengers
+      ON passengers.flight_id = flights.id
+    JOIN people
+      ON passengers.passport_number = people.passport_number
+   WHERE day = 29
+     AND month = 7
+     AND year = 2021
+ORDER BY hour ASC;
 
--- With the passengers on flights that took place the day of the robbery after the time of the robbery the suspect list reduces to "Bruce, Diana and Taylor"
+-- With the passengers on flights that took place the day after the robbery, order by time to get the earliest flight the suspect list reduces to Bruce.
+
+-- We proceed to track 
 
 SELECT airports.full_name
   FROM airports
