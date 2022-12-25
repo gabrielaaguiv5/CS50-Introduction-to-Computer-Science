@@ -51,19 +51,17 @@ SELECT bakery_security_logs.license_plate, activity, name
     AND atm_location = "Leggett Street"
     AND transaction_type = "withdraw";
 
--- Following this investigation there is one match "Taylor", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
+-- Following this investigation there are five matches "Bruce, Luca, Iman, Diana and Taylor", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
 
--- We proceed with the discovery of the accomplice and the city of escape, following Raymond testimony.
-SELECT phone_number
-  FROM people
- WHERE id = 449774;
-
-SELECT receiver, duration
+-- We proceed the suspects who conducted a phonecall in the timeframe, following Raymond testimony.
+SELECT caller, name
   FROM phone_calls
- WHERE caller = "(286) 555-6063"
-   AND day = 28
+  JOIN people
+    ON phone_calls.caller = people.phone_number
+ WHERE day = 28
    AND month = 7
-   AND year = 2021;
+   AND year = 2021
+   AND duration < 60;
 
 -- Given the duration of the call (in seconds), and the witness statement, phone number (676) 555-6554 is the accomplice.
 SELECT id, name
