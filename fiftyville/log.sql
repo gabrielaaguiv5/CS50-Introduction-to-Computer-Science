@@ -66,7 +66,7 @@ SELECT caller, name
 -- Given the duration of the call (in seconds), and the witness statement, our suspect list reduces to "Bruce, Diana and Taylor".
 
 -- We should follow up now with the suspects who got on a flight on the day of the robbery.
-SELECT flight_id
+SELECT id, origin_
   FROM passengers
  WHERE passport_number = 1988161715;
 
