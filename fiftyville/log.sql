@@ -77,7 +77,7 @@ SELECT flights.id, name
    AND year = 2021
    AND hour > 10;
 
--- 
+-- With 
 
 SELECT airports.full_name
   FROM airports
