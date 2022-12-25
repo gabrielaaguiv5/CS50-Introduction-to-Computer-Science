@@ -33,13 +33,12 @@ SELECT bakery_security_logs.license_plate, activity, name
    AND month = 7
    AND year = 2021
    AND hour = 10
-   AND 15 < minute < 25;
+   AND 15 < minute < 25
+   AND activity = "exit";
 
-SELECT id, name
-  FROM people
- WHERE license_plate = "1106N58";
+-- With these results we now have nine suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey and Taylor. We will filter this list with the result of investigating the other witnesses statements.
 
- -- Following up with the account number.
+-- Following up with the account withdraw.
  SELECT bank_accounts.person_id, atm_transactions.account_number
    FROM atm_transactions
    JOIN bank_accounts
