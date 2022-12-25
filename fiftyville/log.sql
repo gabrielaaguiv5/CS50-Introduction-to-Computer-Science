@@ -33,10 +33,11 @@ SELECT bakery_security_logs.license_plate, activity, name
    AND month = 7
    AND year = 2021
    AND hour = 10
-   AND 15 < minute < 25
+   AND minute >= 15
+   AND minute <= 25
    AND activity = "exit";
 
--- With these results we now have nine suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey and Taylor. We will filter this list with the result of investigating the other witnesses statements.
+-- With these results we now have nine suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey. We will filter this list with the result of investigating the other witnesses statements.
 
 -- Following up with the account withdraw and account number.
  SELECT bank_accounts.person_id, atm_transactions.account_number, name
@@ -51,7 +52,7 @@ SELECT bakery_security_logs.license_plate, activity, name
     AND atm_location = "Leggett Street"
     AND transaction_type = "withdraw";
 
--- Following this investigation there are five matches "Bruce, Luca, Iman, Diana and Taylor", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
+-- Following this investigation there are five matches "Bruce, Luca, Iman, Diana", with a car at the time of the report from Ruth, and an atm withdraw from Leggett Street on the day of the crime.
 
 -- We proceed the suspects who conducted a phonecall in the timeframe, following Raymond testimony.
 SELECT caller, name
@@ -63,7 +64,7 @@ SELECT caller, name
    AND year = 2021
    AND duration < 60;
 
--- Given the duration of the call (in seconds), and the witness statement, our suspect list reduces to "Bruce, Diana and Taylor".
+-- Given the duration of the call (in seconds), and the witness statement, our suspect list reduces to "Bruce, Diana".
 
 -- We should follow up now with the suspects who got on a flight on the day of the robbery.
   SELECT flights.id, name, hour, minute
