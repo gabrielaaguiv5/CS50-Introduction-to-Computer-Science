@@ -12,10 +12,16 @@
                 for (let i = 0; i < wrongAnswers.length; i++) {
                     wrongAnswers[i].addEventListener('click', function(){
                         wrongAnswers[i].style.backgroundColor = 'red';
-                        document.querySelector('')
+                        document.querySelector('#Answer').innerHTML = 'Incorrect!';
                     })
                 }
                 //For rightAnswer
+                let right = document.querySelector('.rightAnswer');
+                rightAnswer.addEventListener('click', function(){
+                    rightAnswer.style.backgroundColor = 'green';
+                    document.querySelector('#Answer').innerHTML = 'Correct!';
+
+                })
                 //For freeAnswer
             }
             document.addEventListener("DOMContentLoaded", TriviaCheck);
