@@ -6,7 +6,7 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            function TriviaCheck() {
+            document.addEventListener('DOMContentLoaded", function() {
                 //For wrongAnswer
                 let wrong = document.querySelectorAll('.wrongAnswer');
                 for (let i = 0; i < wrongAnswers.length; i++) {
@@ -34,7 +34,7 @@
                     }
                 })
             }
-            document.addEventListener("DOMContentLoaded", TriviaCheck());
+
         </script>
     </head>
     <body>
