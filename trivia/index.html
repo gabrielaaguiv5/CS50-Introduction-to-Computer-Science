@@ -24,7 +24,14 @@
                 })
                 //For freeAnswer
                 document.querySelector('.check').addEventListener('click', function(){
-                    let free = 
+                    let free = document.querySelector('input');
+                    if (input.value == 'Rebelde'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#freeAnswer').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.quearySelector('#freeAnswer').innerHTML = 'Incorrect!';
+                    }
                 })
             }
             document.addEventListener("DOMContentLoaded", TriviaCheck);
