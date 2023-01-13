@@ -9,27 +9,27 @@
             function TriviaCheck() {
                 //For wrongAnswer
                 let wrong = document.querySelectorAll('.wrongAnswer');
-                for (let i = 0; i < wrongAnswers.length; i++) {
-                    wrongAnswers[i].addEventListener('click', function(){
-                        wrongAnswers[i].style.backgroundColor = 'red';
+                for (let i = 0; i < wrong.length; i++) {
+                    wrong[i].addEventListener('click', function(){
+                        wrong[i].style.backgroundColor = 'red';
                         document.querySelector('#Answer').innerHTML = 'Incorrect!';
                     })
                 }
                 //For rightAnswer
                 let right = document.querySelector('.rightAnswer');
-                rightAnswer.addEventListener('click', function(){
-                    rightAnswer.style.backgroundColor = 'green';
+                right.addEventListener('click', function(){
+                    right.style.backgroundColor = 'green';
                     document.querySelector('#Answer').innerHTML = 'Correct!';
 
                 })
                 //For freeAnswer
                 document.querySelector('.check').addEventListener('click', function(){
                     let free = document.querySelector('input');
-                    if (input.value == 'Rebelde'){
-                        input.style.backgroundColor = 'green';
+                    if (free.value == 'Rebelde'){
+                        free.style.backgroundColor = 'green';
                         document.querySelector('#freeAnswer').innerHTML = 'Correct!';
                     } else {
-                        input.style.backgroundColor = 'red';
+                        free.style.backgroundColor = 'red';
                         document.quearySelector('#freeAnswer').innerHTML = 'Incorrect!';
                     }
                 })
