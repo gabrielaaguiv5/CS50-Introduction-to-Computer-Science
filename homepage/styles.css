@@ -3,13 +3,14 @@
     text-align: center;
 }
 
-.demo-wrap
+.title
 {
     overflow: hidden;
     position: relative;
 }
 
-.demo-content
+.title-content
 {
+    text-align: center;
     position: relative;
 }
