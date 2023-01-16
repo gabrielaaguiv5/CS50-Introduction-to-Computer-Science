@@ -1,3 +1,10 @@
+@font-face
+{
+    src: url(fonts/barbie.ttf);
+    font-family: barbie;
+}
+
+
 .center
 {
     text-align: center;
@@ -7,6 +14,7 @@
 {
     overflow: hidden;
     position: relative;
+    font-family: barbie;
 }
 
 .title-content
