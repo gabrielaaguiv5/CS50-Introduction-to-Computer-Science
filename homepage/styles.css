@@ -96,6 +96,7 @@
     width: 600px;
     height: 350px;
     margin-bottom: 5rem !important;
+    background-size: cover;
 }
 
 * {box-sizing:border-box}
