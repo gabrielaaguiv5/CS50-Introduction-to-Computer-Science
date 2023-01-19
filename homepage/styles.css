@@ -4,6 +4,12 @@
     font-family: barbie;
 }
 
+body
+{
+    background: url("https://www.solidbackgrounds.com/images/950x350/950x350-bright-pink-solid-color-background.jpg");
+    background-repeat: repeat-x repeat-y;
+}
+
 .center
 {
     text-align: center;
@@ -64,7 +70,7 @@
 
 .nav a:hover
 {
-    background-color: #ba0b3f;
+    background-color: #FF007F;
 }
 
 
