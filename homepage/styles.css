@@ -6,7 +6,7 @@
 
 body
 {
-    background: url("https://www.solidbackgrounds.com/images/950x350/950x350-bright-pink-solid-color-background.jpg");
+    background: url(/images/bgrnd_page.jpg);
     background-repeat: repeat-x repeat-y;
 }
 
