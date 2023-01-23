@@ -79,36 +79,3 @@ nav a
     text-decoration: none;
     color: white;
 }
-
-
-@media screen and (max-width: 500px)
-{
-    .navbar a
-    {
-      float: none;
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-}
-
-.hero
-{
-    text-align: center;
-    margin-top: 2rem !important;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-family: barbie;
-    margin-bottom: 2rem !important;
-    color: #ffff;
-}
-
-.hero img
-{
-  max-width: 100%;
-  height: auto;
-  width: auto\9;
-}
-
