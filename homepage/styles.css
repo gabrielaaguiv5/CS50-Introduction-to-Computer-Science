@@ -38,15 +38,45 @@ h3
     font-size: 2.2rem;
 }
 
-p
+p, li
 {
     font-size: 1.6rem;
     line-height: 1.5;
 }
 
+
+
 nav
 {
-    
+    height: 50px;
+    background: url("https://64.media.tumblr.com/581a32b6949ee56237a2504516d847b7/tumblr_nndsupyeCc1urnwvbo1_500.jpg");
+    background-repeat: repeat-x repeat-y;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+
+nav ul
+{
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+nav li
+{
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+
+nav a
+{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
 }
 
 .title-content
