@@ -100,7 +100,7 @@ footer
 {
     margin-top: 10px;
     background-color: white;
-    padding: 1%;
+    padding: 15px;
     display: block;
 }
 
@@ -109,13 +109,5 @@ img
     object-fit: cover;
     height: 100%;
     width: 100%;
-    padding: 10px;
-    text-align: center;
-}
-
-.fit
-{
-    width: 500px;
-    height: 300px;
-    text-align: center;
+    padding: 15px;
 }
