@@ -95,3 +95,11 @@ nav a
     color: white;
     cursor: pointer;
 }
+
+footer
+{
+    margin-top: 10px;
+    background-color: white;
+    padding: 1%;
+    display: block;
+}
