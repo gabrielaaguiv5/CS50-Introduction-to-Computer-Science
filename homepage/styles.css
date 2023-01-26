@@ -12,6 +12,7 @@ html, body
 html
 {
     background: url(/images/bgrnd_page.jpg);
+    
     background-repeat: repeat-x repeat-y;
     font-size: 10px;
     display: block;
