@@ -12,6 +12,8 @@ html, body
 html
 {
     background: url(/images/bgrnd_page.jpg);
+    min-height: 500px;
+    background-attachment: fixed;
     
     background-repeat: repeat-x repeat-y;
     font-size: 10px;
