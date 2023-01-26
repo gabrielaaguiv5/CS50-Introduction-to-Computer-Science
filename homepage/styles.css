@@ -11,7 +11,7 @@ html, body
 
 html
 {
-    background: url(/images/bgrnd_page.jpg);
+    background: url(http://127.0.0.1:8080/images/bgrnd_page.jpg);
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
