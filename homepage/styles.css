@@ -23,7 +23,8 @@ html
 
 body
 {
-    background-color: #DA4176;
+    background-color: #F2BCCD;
+    border: 20px solid hotpink;
     margin: 0 auto;
     width: 70%;
     font-family: barbie;
