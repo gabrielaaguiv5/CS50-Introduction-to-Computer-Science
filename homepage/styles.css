@@ -177,3 +177,7 @@ element.style {
   grid-template-rows: auto;
   white-space: nowrap;
 }
+
+.padding-xxlarge {
+  padding: 4.5rem;
+}
