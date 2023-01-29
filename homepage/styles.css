@@ -17,8 +17,7 @@ html /*Setting fixed background*/
     background-size: 100px;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat-x;
-    background-repeat: repeat-y;
+    background-repeat: repeat-x repeat-y;
     font-size: 10px;
     display: block;
 }
@@ -74,8 +73,7 @@ nav /*Navigation bar with bg picture*/
 {
     height: 50px;
     background: url("https://64.media.tumblr.com/581a32b6949ee56237a2504516d847b7/tumblr_nndsupyeCc1urnwvbo1_500.jpg");
-    background-repeat: repeat-x;
-    background-repeat: repeat-y;
+    background-repeat: repeat-x repeat-y;
     display: flex;
     margin-bottom: 10px;
     padding: 1%;
