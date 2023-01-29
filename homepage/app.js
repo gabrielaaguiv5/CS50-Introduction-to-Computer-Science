@@ -12,4 +12,6 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 Next.addEventListener('click', function()
 {
     carouselSlide.style.transformation ="transform 0.4s ease-in-out";
+    counter++;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 });
