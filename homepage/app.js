@@ -11,14 +11,14 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 
 Next.addEventListener('click', function()
 {
-    carouselSlide.style.transformation ="transform 0.4s ease-in-out";
+    carouselSlide.style.transition ="transform 0.4s ease-in-out";
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 });
 
 Prev.addEventListener('click', function()
 {
-    carouselSlide.style.transformation ="transform 0.4s ease-in-out";
+    carouselSlide.style.transition ="transform 0.4s ease-in-out";
     counter--;
     carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 });
@@ -26,6 +26,7 @@ Prev.addEventListener('click', function()
 carouselSlide.addEventListener('transitionend', function()
 {
     if(carouselImages[counter].id == 'Last'){
-        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+        carouselSlide.style.transition ="none";
+        console.log('none');
     }
 });
