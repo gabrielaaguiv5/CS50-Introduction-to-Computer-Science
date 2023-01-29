@@ -27,6 +27,7 @@ carouselSlide.addEventListener('transitionend', function()
 {
     if(carouselImages[counter].id == 'Last'){
         carouselSlide.style.transition ="none";
-        console.log('none');
+        counter = carouselImages.length -2;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
     }
 });
