@@ -8,3 +8,8 @@ let counter = 1;
 const size = carouselImages[0].clientWidth;
 
 carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+
+Next.addEventListener('click', function()
+{
+    carouselSlide.style.transformation ="transform 0.4s ease-in-out";
+});
