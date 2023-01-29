@@ -30,4 +30,10 @@ carouselSlide.addEventListener('transitionend', function()
         counter = carouselImages.length -2;
         carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
     }
+    if(carouselImages[counter].id == 'First'){
+        carouselSlide.style.transition ="none";
+        counter = carouselImages.length -counter;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+    }
 });
+
