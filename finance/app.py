@@ -133,7 +133,10 @@ def register():
         hash = generate_password_hash(password)
 
         try:
-            
+            #Inserting new username and password from registration in the database
+            db.execute("INSERT INTO users (username,hash) VALUES (?, ?)", username, hash)
+        except:
+            return apology("ERROR: Username already exists")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
