@@ -120,7 +120,13 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        
+
+        if not username:
+            return apology("ERROR: Please input a username")
+        if not password:
+            return apology("ERROR: Please input a Password")
+        if not confirmation:
+            return apology("ERROR: Please confirm your Password")
 
 
 @app.route("/sell", methods=["GET", "POST"])
