@@ -22,10 +22,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-# Make sure API key is set
-if not os.environ.get("API_KEY"):
-    raise RuntimeError("API_KEY not set")
-
 
 @app.after_request
 def after_request(response):
@@ -114,29 +110,8 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    if request.method == "GET":
-        return render_template("registration.html")
-    else:
-        username = request.form.get("username")
-        password = request.form.get("password")
-        confirmation = request.form.get("confirmation")
+    return apology("TODO")
 
-        if not username:
-            return apology("ERROR: Please input a username")
-        if not password:
-            return apology("ERROR: Please input a Password")
-        if not confirmation:
-            return apology("ERROR: Please confirm your Password")
-        if password != confirmation:
-            return apology("ERROR: Passwords do not match")
-
-        hash = generate_password_hash(password)
-
-        try:
-            #Inserting new username and password from registration in the database
-            db.execute("INSERT INTO users (username,hash) VALUES (?, ?)", username, hash)
-        except:
-            return apology("ERROR: Username already exists")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
