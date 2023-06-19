@@ -113,7 +113,30 @@ def register():
     if request.method == "GET":
         return render_template("register.html")
     else:
-        username = request.form.get("")
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+
+        if not username:
+            return apology("ERROR: Username not found. Please input.")
+        if not password:
+            return apology("ERROR: Password not found. Please input.")
+        if not confirmation:
+            return apology("ERROR: Confirmation not found. Please input.")
+        if password != confirmation:
+            return apology("ERROR: Passwords do not match. Please correct.")
+
+        # Begin registration process
+
+        hash = generate_password_hash(password)
+        # Insert username in database
+        try:
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        except:
+            return apology("ERROR: Username already exists. Please try again.")
+        # Automatic login
+        session["user_id"] = new_user
+        return redirect("/")
 
 
 @app.route("/sell", methods=["GET", "POST"])
