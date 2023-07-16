@@ -110,7 +110,9 @@ def quote():
         symbol = request.form.get("symbol")
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
-
+        stock = lookup(symbol.upper())
+        if stock == None:
+            return render_template("quoted.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
