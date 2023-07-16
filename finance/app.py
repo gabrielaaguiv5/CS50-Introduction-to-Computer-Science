@@ -112,7 +112,8 @@ def quote():
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
         if stock == None:
-            return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+            return apology("ERROR: Symbol does not exist. Please input.")
+        return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
