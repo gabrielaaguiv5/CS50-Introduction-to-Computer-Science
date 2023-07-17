@@ -47,12 +47,14 @@ def buy():
         return render_template("buy.html")
     else:
         symbol = request.form.get("symbol")
-        symbol = int(request.form.get("shares"))
+        shares = int(request.form.get("shares"))
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
         if stock == None:
             return apology("ERROR: Symbol does not exist. Please input.")
+        if shares < 0:
+             return apology("ERROR: Amount of shares not allowed. Please input correctly.")
         return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
 
 
