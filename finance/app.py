@@ -62,9 +62,9 @@ def buy():
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
-        if stock == None:
+        if int(stock) == None:
             return apology("ERROR: Symbol does not exist. Please input.")
-        if shares < 0:
+        if int(shares) < 0:
              return apology("ERROR: Amount of shares not allowed. Please input correctly.")
         transaction_value = shares * stock["price"]
 
