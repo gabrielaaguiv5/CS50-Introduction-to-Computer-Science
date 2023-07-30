@@ -40,7 +40,7 @@ def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
 
-    transactions_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
+    transactions_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol HAVING shares > 0", user_id)
     cash_db = db.execute("SELECT cash FROM users WHERE id =?", user_id)
     cash = cash_db[0]["cash"]
 
@@ -51,10 +51,12 @@ def index():
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
-        stock["value"] = stock["price"]*
-        stock["name"] = quote["name"]
+        stock["value"] = stock["price"]*stock["shares"]
+        totalvalue += stock["value"]
+        grandtotal += stock["value"]
 
-    return render_template("index.html", database = transactions_db, cash = cash)
+
+    return render_template("index.html", database = transactions_db, cash = cash, totalvalue=totalvalue, grandtotal=grandtotal)
 
 
 
