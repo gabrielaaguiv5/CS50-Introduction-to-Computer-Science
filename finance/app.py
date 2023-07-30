@@ -44,16 +44,16 @@ def index():
     cash_db = db.execute("SELECT cash FROM users WHERE id =?", user_id)
     cash = cash_db[0]["cash"]
 
-    totalvalue = int(cash)
-    grandtotal = int(cash)
+    totalvalue = cash
+    grandtotal = cash
 
     for stock in stocks:
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
-        stock["price"] = int(quote["price"])
+        stock["price"] = quote["price"]
         stock["value"] = stock["price"]*stock["shares"]
-        totalvalue += int(stock["value"])
-        grandtotal += int(stock["value"])
+        totalvalue += stock["value"]
+        grandtotal += stock["value"]
 
 
     return render_template("index.html", stocks = stocks, cash = cash, totalvalue=totalvalue, grandtotal=grandtotal)
@@ -77,11 +77,11 @@ def buy():
             return apology("ERROR: Symbol does not exist. Please input.")
         if int(shares) < 0:
              return apology("ERROR: Amount of shares not allowed. Please input correctly.")
-        transaction_value = shares * stock["price"]
+        transaction_value = int(shares) * int(stock["price"])
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
-        user_cash = user_cash_db[0]["cash"]
+        user_cash = int(user_cash_db[0]["cash"])
 
         if user_cash < transaction_value:
             return apology("Insufficient funds")
@@ -210,7 +210,7 @@ def sell():
         return render_template("sell.html", symbols = [row["symbol"] for row in symbols_user])
     else:
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
