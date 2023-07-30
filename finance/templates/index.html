@@ -14,14 +14,15 @@
         </tr>
         {% for row in database %}
         <tr>
-            {{row["symbol"]}}
-        </tr>
-        <tr>
-            {{row["symbol"]}}
-        </tr>
-        <tr>
-            {{row["symbol"]}}
-        </tr>
+            <td>
+                {{row["symbol"]}}
+            </td>
+            <td>
+                {{row["shares"]}}
+            </td>
+            <td>
+                {{row["price"]}}
+            </td>
         {% endfor %}
     </table>
 {% endblock %}
