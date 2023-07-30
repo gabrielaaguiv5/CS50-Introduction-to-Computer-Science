@@ -62,9 +62,9 @@ def buy():
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
-        if int(stock) == None:
+        if stock == None:
             return apology("ERROR: Symbol does not exist. Please input.")
-        if int(shares) < 0:
+        if shares < 0:
              return apology("ERROR: Amount of shares not allowed. Please input correctly.")
         transaction_value = shares * stock["price"]
 
@@ -72,7 +72,7 @@ def buy():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        if user_cash < transaction_value:
+        if int(user_cash) < int(transaction_value):
             return apology("Insufficient funds")
 
         updt_cash = user_cash - transaction_value
