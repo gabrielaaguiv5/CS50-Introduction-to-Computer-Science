@@ -55,7 +55,13 @@ def buy():
             return apology("ERROR: Symbol does not exist. Please input.")
         if shares < 0:
              return apology("ERROR: Amount of shares not allowed. Please input correctly.")
-        return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+        transaction_value = shares * stock["price"]
+
+        user_id = session["user_id"]
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
+        return jsonify(user_cash_db)
+
+
 
 
 
