@@ -225,8 +225,11 @@ def sell():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        user_shares = db.execute("SELECT shares FROM transactions WHERE id = :id AND symbol =:symbol", id=user_id)
-        user_cash = user_cash_db[0]["cash"]
+        user_shares = db.execute("SELECT shares FROM transactions WHERE id = :id AND symbol =:symbol GROUP BY symbol", user_id, symbol)
+        user_shares_real = user_shares[0]["shares"]
+
+        if int(shares) < user_shares_real:
+             return apology("ERROR: Not enough shares to sell.")
 
         updt_cash = user_cash + transaction_value
 
