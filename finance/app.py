@@ -56,7 +56,9 @@ def buy():
         return render_template("buy.html")
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = (request.form.get("shares"))
+        if not shares.isdigit():
+            return apology("ERROR: Please input correctly. Partial shares can not be purchased.")
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
