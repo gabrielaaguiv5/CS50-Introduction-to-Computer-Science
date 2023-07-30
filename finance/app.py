@@ -192,18 +192,4 @@ def sell():
     if request.method == "GET":
         user_id = session["user_id"]
         symbols_user = db.execute("SELECT symbol FROM transactions WHERE id = :id HAVING SUM(shares) > 0", id=user_id)
-        
-        user_cash = user_cash_db[0]["cash"]
-
-        if user_cash < transaction_value:
-            return apology("Insufficient funds")
-
-        updt_cash = user_cash - transaction_value
-
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
-
-        date = datetime.datetime.now()
-        new_user = db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
-
-        flash("Your purchase has been successful.")
-        return redirect("/")
+        return render_template("sell.html", symbols = [row["symbol"] for row in rows])
