@@ -6,6 +6,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask import jsonify
+import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -69,6 +70,9 @@ def buy():
 
         db.execute("UPDATE users SET cash = ?", user_id)
 
+        date = datetime.datetime.now()
+        new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        
 
 @app.route("/history")
 @login_required
