@@ -204,33 +204,50 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    if request.method == "GET":
-        user_id = session["user_id"]
-        symbols_user = db.execute("SELECT symbol FROM transactions WHERE user_id = :id GROUP BY symbol HAVING (SUM(shares) > 0)", id=user_id)
-        return render_template("sell.html", symbols = [row["symbol"] for row in symbols_user])
-    else:
-        symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
-        if not symbol:
-            return apology("ERROR: Symbol not found. Please input.")
-        stock = lookup(symbol.upper())
-        if stock == None:
-            return apology("ERROR: Symbol does not exist. Please input.")
-        if int(shares) < 0:
-             return apology("ERROR: Amount of shares not allowed. Please input correctly.")
+    owned_symbols = db.execute("""SELECT symbol, sum(shares) as sum_of_shares
+                                  FROM transactions
+                                  WHERE user_id = ?
+                                  GROUP BY user_id, symbol
+                                  HAVING sum_of_shares > 0;""", session["user_id"])
 
-        transaction_value = shares * stock["price"]
+    if request.method == "POST":
+        if not (symbol := request.form.get("symbol")):
+            return apology("MISSING SYMBOL")
 
-        user_id = session["user_id"]
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
-        user_cash = user_cash_db[0]["cash"]
+        if not (shares := request.form.get("shares")):
+            return apology("MISSING SHARES")
 
-        updt_cash = user_cash + transaction_value
+        # Check share is numeric data type
+        try:
+            shares = int(shares)
+        except ValueError:
+            return apology("INVALID SHARES")
 
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
+        # Check shares is positive number
+        if not (shares > 0):
+            return apology("INVALID SHARES")
 
-        date = datetime.datetime.now()
-        new_user = db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1)*shares, stock["price"], date)
+        symbols_dict = {d['symbol']: d['sum_of_shares'] for d in owned_symbols}
 
-        flash("Successful Sale!")
+        if symbols_dict[symbol] < shares:
+            return apology("TOO MANY SHARES")
+
+        query = lookup(symbol)
+
+        # Get user currently owned cash
+        rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
+
+        # Execute a transaction
+        db.execute("INSERT INTO transactions(user_id, company, symbol, shares, price) VALUES(?, ?, ?, ?, ?);",
+                   session["user_id"], query["name"], symbol, -shares, query["price"])
+
+        # Update user owned cash
+        db.execute("UPDATE users SET cash = ? WHERE id = ?;",
+                   (rows[0]['cash'] + (query['price'] * shares)), session["user_id"])
+
+        flash("Sold!")
+
         return redirect("/")
+
+    else:
+        return render_template("sell.html", symbols=owned_symbols)
