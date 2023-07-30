@@ -26,13 +26,13 @@
                     {{stock.name}}
                 </td>
                 <td>
-                    {{stock.shares}}
+                    {{stock.shares| int}}
                 </td>
                 <td>
                     {{stock.price | usd}}
                 </td>
                 <td>
-                    {{stock.price * stock.shares | usd}}
+                    {{(stock.price  * stock.shares)| usd}}
                 </td>
             </tr>
             {% endfor %}
