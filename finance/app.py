@@ -50,10 +50,10 @@ def index():
     for stock in stocks:
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
-        stock["price"] = quote["price"]
-        stock["value"] = stock["price"]*stock["shares"]
-        totalvalue += stock["value"]
-        grandtotal += stock["value"]
+        stock["price"] = float(quote["price"])
+        stock["value"] = float(stock["price"]*stock["shares"])
+        totalvalue += float(stock["value"])
+        grandtotal += float(stock["value"])
 
 
     return render_template("index.html", stocks = stocks, cash = cash, totalvalue=totalvalue, grandtotal=grandtotal)
