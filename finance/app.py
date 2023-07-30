@@ -190,21 +190,9 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        return render_template("buy.html")
-    else:
-        symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
-        if not symbol:
-            return apology("ERROR: Symbol not found. Please input.")
-        stock = lookup(symbol.upper())
-        if stock == None:
-            return apology("ERROR: Symbol does not exist. Please input.")
-        if shares < 0:
-             return apology("ERROR: Amount of shares not allowed. Please input correctly.")
-        transaction_value = shares * stock["price"]
-
         user_id = session["user_id"]
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
+        symbols_user = db.execute("SELECT symbol FROM transactions WHERE id = :id HAVING SUM(shares) > 0", id=user_id)
+        
         user_cash = user_cash_db[0]["cash"]
 
         if user_cash < transaction_value:
