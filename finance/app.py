@@ -44,7 +44,7 @@ def index():
     cash_db = db.execute("SELECT cash FROM users WHERE id =?", user_id)
     cash = cash_db[0]["cash"]
 
-    return render_template("index.html", database = transactions_db, cash = usd(cash))
+    return render_template("index.html", database = transactions_db, cash = cash)
 
 
 
@@ -72,7 +72,7 @@ def buy():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        if user_cash < transaction_value:
+        if intuser_cash < transaction_value:
             return apology("Insufficient funds")
 
         updt_cash = user_cash - transaction_value
