@@ -17,22 +17,22 @@
             </tr>
         </thead>
         <tbody>
-            {% for row in database %}
+            {% for stock in stocks %}
             <tr>
                 <td>
-                    {{row["symbol"]}}
+                    {{stock.symbol}}
                 </td>
                 <td>
-                    {{row["name"]}}
+                    {{stock.name}}
                 </td>
                 <td>
-                    {{row["shares"]}}
+                    {{stock.shares}}
                 </td>
                 <td>
-                    {{row["price"]| usd}}
+                    {{stock.price | usd}}
                 </td>
                 <td>
-                    {{price * shares}}
+                    {{stock.price * stock.shares}}
                 </td>
             </tr>
             {% endfor %}
