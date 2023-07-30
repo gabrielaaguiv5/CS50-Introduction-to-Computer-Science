@@ -44,16 +44,16 @@ def index():
     cash_db = db.execute("SELECT cash FROM users WHERE id =?", user_id)
     cash = cash_db[0]["cash"]
 
-    totalvalue = float(cash)
-    grandtotal = float(cash)
+    totalvalue = int(cash)
+    grandtotal = int(cash)
 
     for stock in stocks:
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
-        stock["price"] = float(quote["price"])
-        stock["value"] = float(stock["price"]*stock["shares"])
-        totalvalue += float(stock["value"])
-        grandtotal += float(stock["value"])
+        stock["price"] = int(quote["price"])
+        stock["value"] = int(stock["price"]*stock["shares"])
+        totalvalue += int(stock["value"])
+        grandtotal += int(stock["value"])
 
 
     return render_template("index.html", stocks = stocks, cash = cash, totalvalue=totalvalue, grandtotal=grandtotal)
