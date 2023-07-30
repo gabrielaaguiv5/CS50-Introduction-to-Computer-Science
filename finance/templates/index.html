@@ -5,5 +5,23 @@
 {% endblock %}
 
 {% block main %}
-
+    <h1>Welcome to your Portfolio</h1>
+    <table>
+        <tr>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Price</th>
+        </tr>
+        {% for row in database %}
+        <tr>
+            {{row["symbol"]}}
+        </tr>
+        <tr>
+            {{row["symbol"]}}
+        </tr>
+        <tr>
+            {{row["symbol"]}}
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
