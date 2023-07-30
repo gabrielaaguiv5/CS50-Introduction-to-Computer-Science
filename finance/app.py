@@ -61,7 +61,11 @@ def buy():
             return apology("ERROR: Please input correctly. Partial shares can not be purchased.")
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
-        
+        stock = lookup(symbol.upper())
+        if stock == None:
+            return apology("ERROR: Symbol does not exist. Please input.")
+        if shares < 0:
+             return apology("ERROR: Amount of shares not allowed. Please input correctly.")
         transaction_value = int(shares) * int(stock["price"])
 
         user_id = session["user_id"]
