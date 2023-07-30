@@ -8,8 +8,10 @@
 <h1>Buy</h1>
     <form action="/sell" method="post">
         <div class="mb-3">
-            <select name="cars">
-
+            <select name="symbol">
+                {% for symbol in symbols %}
+                    <option value="{{ symbol }}">{{ symbol }}</option>
+                {% endfor %}
             </select>
 
         </div>
