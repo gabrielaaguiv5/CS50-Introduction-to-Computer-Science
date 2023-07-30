@@ -224,13 +224,7 @@ def sell():
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
-
-        user_shares = db.execute("SELECT shares FROM transactions WHERE id=:id AND symbol = :symbol", id=user_id, symbol=symbol)
-        user_shares_real = user_shares[0]["shares"]
-
-        if shares > user_shares_real:
-            return apology("ERROR: Insufficient amount of shares.")
-
+        
         updt_cash = user_cash + transaction_value
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
