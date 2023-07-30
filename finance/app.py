@@ -210,7 +210,9 @@ def sell():
         return render_template("sell.html", symbols = [row["symbol"] for row in symbols_user])
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = (request.form.get("shares"))
+        if not shares.isdigit():
+            return apology("ERROR: Please input correctly. Partial shares can not be sold.")
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
@@ -224,7 +226,7 @@ def sell():
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
-        
+
         updt_cash = user_cash + transaction_value
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
