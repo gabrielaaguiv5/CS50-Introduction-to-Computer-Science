@@ -47,6 +47,13 @@ def index():
     totalvalue = cash
     grandtotal = cash
 
+    for stock in stocks:
+        quote = lookup(stock["symbol"])
+        stock["name"] = quote["name"]
+        stock["price"] = quote["price"]
+        stock["value"] = stock["price"]*
+        stock["name"] = quote["name"]
+
     return render_template("index.html", database = transactions_db, cash = cash)
 
 
