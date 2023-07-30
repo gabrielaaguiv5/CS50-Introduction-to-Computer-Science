@@ -44,7 +44,15 @@ def index():
     cash_db = db.execute("SELECT cash FROM users WHERE id =?", user_id)
     cash = cash_db[0]["cash"]
 
-    return render_template("index.html", database = transactions_db, cash = cash)
+    total_current_value = 0
+    for s in stocks:
+        s.update({'current_price': lookup(s['symbol'])['price']})
+        s.update({'total_current_value': s['current_price'] * s['total_shares'],
+            'symbol': s['symbol'].upper()})
+        total_current_value += s['total_current_value']
+
+
+    return render_template("index.html", database = transactions_db, cash = cash, value=total_current_value)
 
 
 
