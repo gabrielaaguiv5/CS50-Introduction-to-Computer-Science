@@ -73,6 +73,9 @@ def buy():
         date = datetime.datetime.now()
         new_user = db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
 
+        flash("Your purchase has been successful.")
+        return redirect("/")
+
 
 @app.route("/history")
 @login_required
