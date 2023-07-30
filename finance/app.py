@@ -203,18 +203,21 @@ def sell():
             return apology("ERROR: Symbol does not exist. Please input.")
         if shares < 0:
              return apology("ERROR: Amount of shares not allowed. Please input correctly.")
+
         transaction_value = shares * stock["price"]
 
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
+        user_shares = db.execute("SELECT shares FROM transactions)
+
         updt_cash = user_cash + transaction_value
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
         date = datetime.datetime.now()
-        new_user = db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
+        new_user = db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1)*shares, stock["price"], date)
 
         flash("Successful Sale!")
         return redirect("/")
