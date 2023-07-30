@@ -44,6 +44,9 @@ def index():
     cash_db = db.execute("SELECT cash FROM users WHERE id =?", user_id)
     cash = cash_db[0]["cash"]
 
+    totalvalue = cash
+    grandtotal = cash
+
     return render_template("index.html", database = transactions_db, cash = cash)
 
 
