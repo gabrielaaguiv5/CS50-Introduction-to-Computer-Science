@@ -29,7 +29,7 @@
                     {{stock.shares}}
                 </td>
                 <td>
-                    {{stock.price}}
+                    {{stock.price | usd}}
                 </td>
                 <td>
                     {{stock.price * stock.shares | usd}}
