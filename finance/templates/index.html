@@ -32,18 +32,18 @@
                     {{stock.price | usd}}
                 </td>
                 <td>
-                    {{stock.price * stock.shares}}
+                    {{stock.price * stock.shares | usd}}
                 </td>
             </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-              <th id="total" colspan="2" style="text-align:right;">Cash:</th>
+              <th id="total" colspan="4" style="text-align:right;">Cash:</th>
               <td class="left">{{cash | usd}}</td>
             </tr>
             <tr></tr>
-              <th id="total" colspan="2" style="text-align:right;">Total:</th>
+              <th id="total" colspan="4" style="text-align:right;">Total:</th>
               <td class="left">$10.000</td>
             </tr>
            </tfoot>
