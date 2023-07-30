@@ -210,7 +210,7 @@ def sell():
         return render_template("sell.html", symbols = [row["symbol"] for row in symbols_user])
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = request.form.get("shares")
         if not symbol:
             return apology("ERROR: Symbol not found. Please input.")
         stock = lookup(symbol.upper())
