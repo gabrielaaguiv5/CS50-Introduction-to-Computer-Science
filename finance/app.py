@@ -56,7 +56,7 @@ def index():
         grandtotal += stock["value"]
 
 
-    return render_template("index.html", database = stocks, cash = cash, totalvalue=totalvalue, grandtotal=grandtotal)
+    return render_template("index.html", stocks = stocks, cash = cash, totalvalue=totalvalue, grandtotal=grandtotal)
 
 
 
