@@ -72,7 +72,8 @@ def buy():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
         user_cash = int(user_cash_db[0]["cash"])
 
-
+        if user_cash < transaction_value:
+            return apology("Insufficient funds")
 
         updt_cash = user_cash - transaction_value
 
