@@ -51,7 +51,7 @@ def index():
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
         stock["price"] = int(quote["price"])
-        stock["value"] = int(stock["price"]*stock["shares"])
+        stock["value"] = int(stock["price"]*int(stock["shares"]))
         totalvalue += int(stock["value"])
         grandtotal += int(stock["value"])
 
@@ -75,7 +75,7 @@ def buy():
         stock = lookup(symbol.upper())
         if stock == None:
             return apology("ERROR: Symbol does not exist. Please input.")
-        if float(shares) < 0:
+        if int(shares) < 0:
              return apology("ERROR: Amount of shares not allowed. Please input correctly.")
         transaction_value = shares * stock["price"]
 
