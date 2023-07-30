@@ -24,7 +24,7 @@
                     {{row["shares"]}}
                 </td>
                 <td>
-                    {{row["price"]}}
+                    {{row["price"]| usd}}
                 </td>
             </tr>
             {% endfor %}
@@ -32,7 +32,7 @@
         <tfoot>
             <tr>
               <th id="total" colspan="2" style="text-align:right;">Cash:</th>
-              <td class="left">{{cash}}</td>
+              <td class="left">{{cash | usd}}</td>
             </tr>
             <tr></tr>
               <th id="total" colspan="2" style="text-align:right;">Total:</th>
