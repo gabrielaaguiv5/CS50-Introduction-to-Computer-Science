@@ -10,8 +10,10 @@
         <thead>
             <tr>
             <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
             <th scope="col">Shares</th>
             <th scope="col">Price</th>
+            <th scope="col">Total</th>
             </tr>
         </thead>
         <tbody>
@@ -21,10 +23,16 @@
                     {{row["symbol"]}}
                 </td>
                 <td>
+                    {{row["name"]}}
+                </td>
+                <td>
                     {{row["shares"]}}
                 </td>
                 <td>
                     {{row["price"]| usd}}
+                </td>
+                <td>
+                    
                 </td>
             </tr>
             {% endfor %}
