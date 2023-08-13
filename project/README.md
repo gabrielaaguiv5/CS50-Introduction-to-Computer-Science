@@ -8,4 +8,4 @@
 #### The idea: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
 #### The development: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
 #### The files: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
-#### The development: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
+#### The results: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
