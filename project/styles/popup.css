@@ -3,7 +3,7 @@
 body
 {
     background:blue url('/images/background.png');
-    min-width: 800px;
+    min-width: 500px;
     max-width: 100%;
     position: relative;
     vertical-align:middle;
