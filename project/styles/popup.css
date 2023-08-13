@@ -2,7 +2,7 @@
 
 body
 {
-    background:blue url('/images/background.png') no-repeat scroll left center;
+    background:blue url('/images/background.png');
 }
 
 h1
