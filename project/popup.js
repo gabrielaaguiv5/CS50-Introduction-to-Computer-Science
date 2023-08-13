@@ -1,17 +1,11 @@
-chrome.runtime.sendMessage({ action: 'captureScreenshots' });
-
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === 'screenshotUrls') {
+chrome.tabs.query({}, tabs => {
     const tabList = document.getElementById('tabList');
-    message.urls.forEach((url, index) => {
+    tabs.forEach(tab => {
       const listItem = document.createElement('li');
       const link = document.createElement('a');
-      const image = document.createElement('img');
-      image.src = url;
-      link.href = '#'; // You can set this to the tab's actual URL
-      link.appendChild(image);
+      link.href = tab.url; // Set the link's href to the tab's URL
+      link.textContent = tab.title;
       listItem.appendChild(link);
       tabList.appendChild(listItem);
     });
-  }
-});
+  });
