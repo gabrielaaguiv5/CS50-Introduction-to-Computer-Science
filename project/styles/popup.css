@@ -1,4 +1,10 @@
-body {background-color: #E4F6F8;}
+/* Tabs Sorter by Gabriela Aguilar 2023 - Style Sheet */
+
+body
+{
+    background-color: #E4F6F8;
+}
+
 h1
 {
     font-family: 'helvetica', sans-serif;
@@ -6,20 +12,24 @@ h1
     font-size: 25px;
     margin-bottom: 15px;
 }
+
 ul
 {
     font-family: 'helvetica';
     color: #3b147b;
     font-size: 15px;
 }
+
 a
 {
     text-decoration: none;
 }
+
 a:hover
 {
     text-decoration: underline;
 }
+
 body
 {
     font-family: Arial, sans-serif;
