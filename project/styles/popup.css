@@ -18,6 +18,13 @@ h1
     margin-bottom: 15px;
 }
 
+p
+{
+    font-family: 'Didot LT STD';
+    color: #3b147b;
+    font-size: 15px;
+}
+
 ul
 {
     font-family: 'Didot LT STD';

@@ -1,6 +1,10 @@
-chrome.tabs.query({currentWindow: true}, tabs => {
+// Tabs Sorter by Gabriela Aguilar 2023 - Back End
+
+chrome.tabs.query({currentWindow: true}, tabs =>
+  {
   const tabList = document.getElementById('tabList');
-  tabs.forEach(tab => {
+  tabs.forEach(tab =>
+    {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
 
