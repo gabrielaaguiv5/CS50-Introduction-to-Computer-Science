@@ -18,4 +18,4 @@
     4. popup.js: Contains the JavaScript code that allows the Extension to work. The ID of each opened tab, on a current Chrome Window, gets organized in a programmed list, in which every new <li> element is a "link" which emulates the "clicking" action to get to a tab.
     5. options.html: Gives explination "Simply click on the tab that is listed to be redirected. Only will work within the tabs on the same window. If multiple windows are open the list of tabs will be unique on each one."
 #### The results: Tab Sorter was tested by uploading to my Chrome. It does allow me to get from a tab to another by navigating the list compiled on the Pop Up.
-### Thank You CS50!
+### Thank You CS50! Hope you like it!
