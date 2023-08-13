@@ -3,6 +3,7 @@
 body
 {
     background:blue url('/images/background.png');
+    opacity: 0.6;
 }
 
 h1
