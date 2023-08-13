@@ -16,8 +16,8 @@ chrome.tabs.query({currentWindow: true}, tabs => // Just access to tabs on the c
       activateTab(tab.id);  // The event involves for a click to replicate clicking on a Tab in the current Window, hence redirecting
     });
 
-    listTab.appendChild(link);
-    tabList.appendChild(listTab);
+    listTab.appendChild(link); // Link (Event Listenter) created
+    tabList.appendChild(listTab); 
   });
 });
 
