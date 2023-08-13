@@ -24,13 +24,11 @@ ul
     color: #3b147b;
     font-size: 15px;
 }
-a:link
-{
-    color: black;
-}
+
 a
 {
     text-decoration: none;
+    color: brown;
 }
 
 a:hover
