@@ -5,10 +5,39 @@ h1{
     font-size: 25px;
     margin-bottom: 15px;
 }
-ul{
-    font-family: 'helvetica';
-    color: #3b147b;
-    font-size: 15px;
+ul
+{
+    line-height: 1.5em;
+    margin: 5px 0 15px;
+    padding: 0;
+}
+li
+{
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 20px;
+}
+li.heart::before, li.heart::after
+{
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    width: 7px;
+    height: 12px;
+    background: #f9dd94;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+li.heart::after
+{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
 a:hover
 {
