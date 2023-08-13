@@ -11,7 +11,7 @@ body
 
 h1
 {
-    position: center;
+    position: relative;
     font-family: 'helvetica', sans-serif;
     color: #02093B;
     font-size: 25px;
