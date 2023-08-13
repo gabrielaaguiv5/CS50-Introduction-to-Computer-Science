@@ -3,29 +3,24 @@ h1{
     font-family: 'helvetica';
     color: red;
     font-size: 25px;
+    margin-bottom: 15px;
 }
 ul{
     font-family: 'helvetica';
     color: #3b147b;
     font-size: 20px;
+    list-style-type: none;
+    padding: 0;
 }
-a.nav-link:link
+a {
+    text-decoration: none;
+    color: #0078d4;
+  }
+a:hover {
+    text-decoration: underline;
+  }
+body
 {
-   color: #fb3f00;
-   text-decoration: none;
-}
-a.nav-link:visited
-{
-   color: #fb3f00;
-   text-decoration: none;
-}
-a.nav-link:hover
-{
-   color: #fb3f00;
-   text-decoration: none;
-}
-a.nav-link:active
-{
-   color: #fb3f00;
-   text-decoration: none;
+    font-family: Arial, sans-serif;
+    margin: 10px;
 }
