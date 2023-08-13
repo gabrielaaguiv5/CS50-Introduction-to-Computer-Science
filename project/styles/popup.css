@@ -3,6 +3,10 @@
 body
 {
     background:blue url('/images/background.png');
+    min-width: 1005px; 
+    max-width: 100%;
+    position: relative;
+    vertical-align:middle;
 }
 
 h1
