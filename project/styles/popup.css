@@ -9,9 +9,6 @@ ul{
     color: #AD3838ff;
     font-size: 20px;
 }
-a{
-    text-decoration:none;
-}
 a.nav-link:link
 {
    color: #fb3f00;
