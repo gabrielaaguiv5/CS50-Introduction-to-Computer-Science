@@ -2,7 +2,7 @@
 
 body
 {
-    background-color: #E4F6F8;
+    background:blue url('/images/background.png') no-repeat scroll left center;
 }
 
 h1
