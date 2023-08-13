@@ -13,7 +13,7 @@ h1
 {
     position: relative;
     font-family: 'Franklin Gothic', sans-serif;
-    color: #02093B;
+    color: white;
     font-size: 25px;
     margin-bottom: 15px;
 }
@@ -28,7 +28,7 @@ ul
 a
 {
     text-decoration: none;
-    color: black;
+    color: #02093B;
 }
 
 a:hover
