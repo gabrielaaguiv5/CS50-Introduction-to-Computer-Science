@@ -8,7 +8,7 @@ chrome.tabs.query({currentWindow: true}, tabs => // Just access to tabs on the c
     const listTab = document.createElement('li'); // Makes each ID into a li element for the <ul> in popup.html
     const link = document.createElement('a'); // Makes each li element into a shortcut for the currently opened tab
 
-    link.textContent = tab.title || tab.url; // Identify Tab per how it appears on the Tab 
+    link.textContent = tab.title || tab.url; // The text on the list will be exacltly how the Tab's html present 
     link.href = '#'; // Set a placeholder href
     link.addEventListener('click', event => {
       event.preventDefault(); // Prevent default link behavior
