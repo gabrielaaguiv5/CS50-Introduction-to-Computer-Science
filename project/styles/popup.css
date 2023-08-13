@@ -1,6 +1,11 @@
-body {background-color: #FFE1FF;}
+body {background-color: #7b0e0e;}
+h1{
+    font-family: 'Impact';
+    color: #fdfafa;
+    font-size: 25px;
+    }
 ol{
 font-family: 'Impact';
-color: #42000A;
+color: #d55555;
 font-size: 25px;
 }
