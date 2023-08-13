@@ -1,6 +1,6 @@
 body {background-color: #E4F6F8;}
 h1{
-    font-family: 'helvetica';
+    font-family: 'helvetica', sans-serif;
     color: red;
     font-size: 25px;
     margin-bottom: 15px;
@@ -12,13 +12,15 @@ ul{
     list-style-type: none;
     padding: 0;
 }
-a {
+a
+{
     text-decoration: none;
     color: #0078d4;
-  }
-a:hover {
+}
+a:hover
+{
     text-decoration: underline;
-  }
+}
 body
 {
     font-family: Arial, sans-serif;
