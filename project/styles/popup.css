@@ -1,5 +1,6 @@
 body {background-color: #E4F6F8;}
-h1{
+h1
+{
     font-family: 'helvetica', sans-serif;
     color: red;
     font-size: 25px;
@@ -10,6 +11,10 @@ ul
     font-family: 'helvetica';
     color: #3b147b;
     font-size: 15px;
+}
+a
+{
+    text-decoration: none;
 }
 a:hover
 {
