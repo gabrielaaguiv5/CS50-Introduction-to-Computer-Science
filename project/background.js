@@ -1,6 +1,9 @@
 // background.js
-chrome.commands.onCommand.addListener(command => {
-    if (command === "open_tab_shortcut") {
-      chrome.tabs.create({ url: "https://www.example.com" }); // Replace the URL with the desired target page
-    }
+chrome.tabs.query({}, tabs => {
+    const tabList = document.getElementById('tabList');
+    tabs.forEach(tab => {
+      const listItem = document.createElement('li');
+      listItem.textContent = tab.title;
+      tabList.appendChild(listItem);
+    });
   });
