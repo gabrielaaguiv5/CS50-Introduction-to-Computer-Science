@@ -11,34 +11,15 @@ ul
     margin: 5px 0 15px;
     padding: 0;
 }
-li
-{
-    list-style: none;
-    position: relative;
-    padding: 0 0 0 20px;
-}
-li.heart::before, li.heart::after
-{
+li.square::before {
     content: "";
     position: absolute;
-    left: 7px;
-    top: 5px;
-    width: 7px;
-    height: 12px;
-    background: #f9dd94;
-    border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
-li.heart::after
-{
-    content: "";
-    position: absolute;
-    top: 5px;
     left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-}
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #f9dd94;
+  }
 a:hover
 {
     text-decoration: underline;
