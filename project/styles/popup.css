@@ -8,8 +8,8 @@ h1{
 ul{
     font-family: 'helvetica';
     color: #3b147b;
-    font-size: 20px;
-    list-style-type: ;
+    font-size: 15px;
+    list-style-type: disc;
     padding: 0;
 }
 a
