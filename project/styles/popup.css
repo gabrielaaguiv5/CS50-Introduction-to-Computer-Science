@@ -5,17 +5,12 @@ h1{
     font-size: 25px;
     margin-bottom: 15px;
 }
-ul{
+ol{
     font-family: 'helvetica';
     color: #3b147b;
     font-size: 15px;
-    list-style-type: disc;
+    list-style-type: circle;
     padding: 0;
-}
-a
-{
-    text-decoration: none;
-    color: #0078d4;
 }
 a:hover
 {
