@@ -12,7 +12,9 @@
     1. images: Contains the icons .png files, which I created in Canvas.
     2. styles: Contains the .css file, which styled both the Pop Up and the Options page.
 2. Files:
-    1. manifest.json: Main information of version, name, author, icons, and content which calls the code in .js file.
-    2. popup.html: The Front End part of the Extension. HTML file which dictates the look the user gets of the 
-
+    1. manifest.json: Main information of version, name, author, icons, and permissions of the Extension.
+    2. popup.html: The Front End part of the Extension. HTML file which dictates the look the user gets of the Extension, via a Pop Up, and where the .js code gets called.
+    3. popup.css: CSS file which dictates the style for all the elements in the HTML files.
+    4. popup.js: Contains the JavaScript code that allows the Extension to work. The ID of each opened tab, on a current Chrome Window, gets organized in a programmed list, in which every new <li> element is a "link" which emulates the "clicking" action to get to a tab.
+    5. options.html: Gives explination "Simply click on the tab that is listed to be redirected."
 #### The results: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
