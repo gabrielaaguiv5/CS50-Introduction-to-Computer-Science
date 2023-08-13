@@ -3,9 +3,12 @@ h1{
     font-family: 'helvetica';
     color: #AD3838ff;
     font-size: 25px;
-    }
+}
 ol{
-font-family: 'helvetica';
-color: #AD3838ff;
-font-size: 10px;
+    font-family: 'helvetica';
+    color: #AD3838ff;
+    font-size: 10px;
+}
+a{
+    text-decoration:none;
 }
