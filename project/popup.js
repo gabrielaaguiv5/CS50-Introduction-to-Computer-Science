@@ -1,4 +1,4 @@
-chrome.tabs.query({}, tabs => {
+chrome.tabs.query({currentWindow: true}, tabs => {
   const tabList = document.getElementById('tabList');
   tabs.forEach(tab => {
     const listItem = document.createElement('li');
