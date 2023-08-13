@@ -1,7 +1,7 @@
 body {background-color: powderblue;}
 h1{
     font-family: 'helvetica';
-    color: black;
+    color: linear-gradient(0deg, #F8F9FCff, #3B167Dff, #B9C3E5ff, #4E4DA6ff, #5D72C2ff);
     font-size: 25px;
 }
 ul{
