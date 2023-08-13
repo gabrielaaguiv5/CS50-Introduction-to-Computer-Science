@@ -9,8 +9,10 @@
 #### The development: Reading the documentation I was able to identify the key elements necessary to put together and launch a successful Chrome Extension. The files I detail as follows.
 #### The files:
 1. Folders:
-    1. images:
-    2. styles
+    1. images: Contains the icons .png files, which I created in Canvas.
+    2. styles: Contains the .css file, which styled both the Pop Up and the Options page.
 2. Files:
+    1. manifest.json: Main information of version, name, author, icons, and content which calls the code in .js file.
+    2. popup.html: The Front End part of the Extension. HTML file which dictates the look the user gets of the 
 
 #### The results: Tab Sorter: Easing Navigation in Tab-Overloaded Scenarios.
